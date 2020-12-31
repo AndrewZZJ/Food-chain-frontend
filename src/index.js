@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import House from './Component/House';
-import Garden from './Component/Garden';
+import House from './component/House';
+import Garden from './component/Garden';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
