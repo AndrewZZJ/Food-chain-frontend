@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './pages/LoginPage';
 // import App from './pages/WaitingPage';
-import MapTile from './components/MapTile';
+// import MapTile from './components/MapTile';
+import ChooseReserveCard from './components/ChooseReserveCard';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MapTile id="/Tile-1.svg" direction="1" position={{xTile: "50px", yTile: "70px"}} size={{height: "300px", width:"200px"}} />
+      {/*<MapTile id="/Tile-1.svg" direction="1" position={{xTile: "50px", yTile: "70px"}} size={{height: "300px", width:"200px"}} />*/}
+      <ChooseReserveCard ></ChooseReserveCard>
   </React.StrictMode>,
   document.getElementById('root')
 );
