@@ -1,45 +1,71 @@
-.App {
-  text-align: center;
-  letter-spacing: 1px;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#waiting-page{
   display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  font-family: "VTCSuperMarketSaleRegular";
+  letter-spacing: 2px;
+}
+
+#navbar{
+  height: 50px;
+  background-color: inherit;
+  border-bottom: 1px solid #707070;
+}
+
+#navbar img{
+  height: 30px;
+}
+
+#drop-down .dropdown-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+#waiting-room-logo {
+  position: absolute;
+  left: 6.875%;
+  top: 10%;
+  width: 23%;
+}
+
+#wrapper {
+  margin-top: 100px;
+  width: 80%;
+  flex-grow: 1;
+}
+
+#confirm-button {
+  padding: 20px;
+}
+
+#player-wrapper{
+  border: 3px solid #262727;
+  height: 75%;
+}
+
+#player-wrapper .player{
+  display: flex; 
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.player-name{
+  font-size: 2em;
+  display: block;
+  font-weight: normal;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.status{
+  font-size: 1.5em;	
+  display: block;
+  font-weight: normal;
 }
 
 @font-face {
-  font-family: 'VTC';
-  src: local('VTC'), url(../fonts/VTCSuperMarketSaleRegular.ttf) format('truetype');
+  font-family: 'VTCSuperMarketSaleRegular';
+  src: url('../fonts/VTCSuperMarketSaleRegular.ttf') format('truetype');
 }
-

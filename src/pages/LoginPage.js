@@ -1,32 +1,29 @@
-import logo from '../images/Cover.png';
-import './LoginPage.css';
-import { Form, Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../index.css';
+import './LoginPage.css';
 
 function LoginPage() {
   return (
-    <div className="LoginPage">
+    <div id="login-page">
 	  <Container>
-	    <Row className = "align-items-center">
+	    <Row className="align-items-center">
 		  <Col>
-		    <img src={logo} alt="Title screen" />
+		    <img src="/Cover.png" alt="Title screen" />
 		  </Col>
 		  <Col>
 		    <Form>
-			  <Form.Group controlId="formBasicEmail">
-			    <Form.Label style ={{fontFamily: "VTC"} }>USERNAME</Form.Label>
-			    <Form.Control type="email" placeholder="Username" />
+			  <Form.Group controlId="formUsername">
+			    <Form.Label>USERNAME</Form.Label>
+			    <Form.Control type="text" placeholder="Username" />
 			    <Form.Text className="text-muted"></Form.Text>
 			  </Form.Group>
-			  <Form.Group controlId="formBasicPassword">
-			    <Form.Label style ={{fontFamily: "VTC"}}>PASSWORD</Form.Label>
+			  <Form.Group controlId="formPassword">
+			    <Form.Label>PASSWORD</Form.Label>
 			    <Form.Control type="password" placeholder="Password" />
 		      </Form.Group>
-			  <Button variant="primary" type="submit" style ={{fontFamily: "VTC"}}>LOGIN</Button>
+			  <Button id="submit-button" variant="primary" type="submit">LOGIN</Button>
 			</Form>
 		  </Col>
 		</Row>

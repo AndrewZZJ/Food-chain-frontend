@@ -1,44 +1,18 @@
-.App {
-  text-align: left;
-  letter-spacing: 1px;
+#login-page{
+    font-family: "VTCSuperMarketSaleRegular";
+    letter-spacing: 1px;
+    font-size: 1.5em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#login-page input{
+    font-family: sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#submit-button{
+    letter-spacing: 1px;
 }
 
 @font-face {
-  font-family: 'VTC';
-  src: local('VTC'), url(../fonts/VTCSuperMarketSaleRegular.ttf) format('truetype');
+    font-family: 'VTCSuperMarketSaleRegular';
+    src: url('../fonts/VTCSuperMarketSaleRegular.ttf') format('truetype');
 }
