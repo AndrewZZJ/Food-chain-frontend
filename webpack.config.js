@@ -1,4 +1,5 @@
 const Path = require("path");
+const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require('webpack');
 
@@ -34,6 +35,14 @@ module.exports = {
         }),
         new webpack.ProvidePlugin({
             "React": "react",
+        }),
+        new CopyPlugin({
+            patterns: [
+              {from: "public/**/*", to: "[name].[ext]"},
+            ],
+            options: {
+              concurrency: 100,
+            },
         }),
     ],
     devServer: {
