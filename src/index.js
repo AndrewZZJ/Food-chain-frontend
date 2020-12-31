@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css'
 import './index.css';
-import Marketingtile from './component/Marketingtile';
+import Restauranttile from './component/Restauranttile';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
 <React.StrictMode>
-  <Marketingtile marketingtile_src="/Marketing_Tile-1.svg" rotate="0" height="500tx" width="300tx" />;
+  <Restauranttile src="/restaurant-1.svg" rotate="0" height="500tx" width="300tx" />;
 </React.StrictMode>,
 document.getElementById('root')
 );
