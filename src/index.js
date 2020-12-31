@@ -2,15 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css'
 import './index.css';
-
-import MilestoneCard from './component/Milestones';
+import House from './component/House';
+import Garden from './component/Garden';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <MilestoneCard  src="/Milestone-1.svg"  height="500tx" width="300tx" />
-  </React.StrictMode>,
-  document.getElementById('root')
+<React.StrictMode>
+<House House_src="/house.svg" rotate="0" height="500tx" width="300tx" />;
+<Garden Garden_src="/garden.svg" rotate="0" height="165tx" width="50tx" />;
+</React.StrictMode>,
+document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
