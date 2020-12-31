@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './App.css'
 import './index.css';
-import App from './App';
+import Messagemodal from './component/MessageModal';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Messagemodal title="PLACING THE FIRST RESTAURANT" text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+nonumy eirmod tempor invidunt ut labore et dolore magna
+aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+sanctus est Lorem ipsum dolor sit amet" buttonTitle="OK"/>
   </React.StrictMode>,
   document.getElementById('root')
 );
