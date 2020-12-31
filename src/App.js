@@ -1,6 +1,6 @@
 import logo from './Cover.png';
 import './App.css';
-import { Form, Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
@@ -8,8 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 function App() {
-  return (
-    <div className="App">
+	return (
+	<div className="App">
 	  <Container>
 	    <Row className = "align-items-center">
 		  <Col>
@@ -30,9 +30,9 @@ function App() {
 			</Form>
 		  </Col>
 		</Row>
-	  </Container>
+		</Container>
     </div>
-  );
+	);
 }
 
 export default App;
