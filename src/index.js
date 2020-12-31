@@ -2,14 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css'
 import './index.css';
-import House from './component/House';
-import Garden from './component/Garden';
+import Marketingtile from './component/Marketingtile';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
 <React.StrictMode>
-<House House_src="/house.svg" rotate="0" height="500tx" width="300tx" />;
-<Garden Garden_src="/garden.svg" rotate="0" height="165tx" width="50tx" />;
+  <Marketingtile marketingtile_src="/Marketing_Tile-1.svg" rotate="0" height="500tx" width="300tx" />;
 </React.StrictMode>,
 document.getElementById('root')
 );
