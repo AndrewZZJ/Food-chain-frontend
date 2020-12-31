@@ -18,7 +18,7 @@ function App() {
 		  <Col>
 		    <Form>
 			  <Form.Group controlId="formBasicEmail">
-			    <Form.Label style ={{fontFamily: "VTC"} }>USERNAME</Form.Label>
+			    <Form.Label style ={{fontFamily: "VTC"}}>USERNAME</Form.Label>
 			    <Form.Control type="email" placeholder="Username" />
 			    <Form.Text className="text-muted"></Form.Text>
 			  </Form.Group>
@@ -26,7 +26,7 @@ function App() {
 			    <Form.Label style ={{fontFamily: "VTC"}}>PASSWORD</Form.Label>
 			    <Form.Control type="password" placeholder="Password" />
 		      </Form.Group>
-			  <Button variant="primary" type="submit" style ={{fontFamily: "VTC"}}>LOGIN</Button>
+			  <Button variant="info" type="submit" style ={{fontFamily: "VTC"}}>LOGIN</Button>
 			</Form>
 		  </Col>
 		</Row>

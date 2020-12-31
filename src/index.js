@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import EmployeeCard from './component/Card';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <EmployeeCard imgsrc="/Card-1.svg" imgheight="300px" imgwidth="200px" />
   </React.StrictMode>,
   document.getElementById('root')
 );
