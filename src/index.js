@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './pages/LoginPage';
+// import App from './pages/WaitingPage';
+import MapTile from './components/MapTile';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MapTile id="/Tile-1.svg" direction="1" position={{xTile: "50px", yTile: "70px"}} size={{height: "300px", width:"200px"}} />
   </React.StrictMode>,
   document.getElementById('root')
 );

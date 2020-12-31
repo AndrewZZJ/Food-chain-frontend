@@ -1,15 +1,15 @@
-import logo from './Cover.png';
-import './App.css';
+import logo from '../images/Cover.png';
+import './LoginPage.css';
 import { Form, Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
+import '../index.css';
 
-function App() {
+function LoginPage() {
   return (
-    <div className="App">
+    <div className="LoginPage">
 	  <Container>
 	    <Row className = "align-items-center">
 		  <Col>
@@ -35,4 +35,4 @@ function App() {
   );
 }
 
-export default App;
+export default LoginPage;
