@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css'
 import './index.css';
-import EmployeeCard from './component/Card';
+
+import MilestoneCard from './component/Milestones';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <EmployeeCard imgsrc="/Card-1.svg" imgheight="300px" imgwidth="200px" />
+    <MilestoneCard  src="/Milestone-1.svg"  height="500tx" width="300tx" />
   </React.StrictMode>,
   document.getElementById('root')
 );
