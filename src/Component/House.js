@@ -6,5 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default function House(props) {
-    return(<Card.Img variant="top"  src={props.House_src}  height={props.height} width={props.width}/>);
+    return(<Card.Img variant="top"  src={props.House_src}  
+    style = {{transform: `rotate(${(props.rotate%4) * 90}deg)`}} height={props.height} 
+    width={props.width} />);
 }

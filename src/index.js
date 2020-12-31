@@ -7,8 +7,8 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
 <React.StrictMode>
-<House House_src="/house.svg" height="500tx" width="300tx" />;
-<Garden Garden_src="/garden.svg" height="165tx" width="50tx" />;
+<House House_src="/house.svg" rotate="0" height="500tx" width="300tx" />;
+<Garden Garden_src="/garden.svg" rotate="0" height="165tx" width="50tx" />;
 </React.StrictMode>,
 document.getElementById('root')
 );

@@ -6,5 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default function Garden(props) {
-    return(<Card.Img variant="top"  src={props.Garden_src}  height={props.height} width={props.width}/>);
+    return(<Card.Img variant="top"  src={props.Garden_src}  
+    style = {{transform: `rotate(${(props.rotate%4) * 90}deg)`}} height={props.height} 
+    width={props.width} />);
 }
