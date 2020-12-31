@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import MilestoneCard from './Component/Milestones';
+import MilestoneCard from './component/Milestones';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
