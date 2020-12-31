@@ -3,6 +3,8 @@
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  font-family: "VTCSuperMarketSaleRegular";
+  letter-spacing: 2px;
 }
 
 #navbar{
@@ -19,6 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 5px;
 }
 
 #waiting-room-logo {
@@ -53,9 +56,16 @@
 .player-name{
   font-size: 2em;
   display: block;
+  font-weight: normal;
 }
 
 .status{
   font-size: 1.5em;	
   display: block;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'VTCSuperMarketSaleRegular';
+  src: url('../fonts/VTCSuperMarketSaleRegular.ttf') format('truetype');
 }

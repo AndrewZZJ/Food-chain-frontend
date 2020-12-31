@@ -6,7 +6,7 @@ import './LoginPage.css';
 
 function LoginPage() {
   return (
-    <div>
+    <div id="login-page">
 	  <Container>
 	    <Row className="align-items-center">
 		  <Col>
@@ -23,7 +23,7 @@ function LoginPage() {
 			    <Form.Label>PASSWORD</Form.Label>
 			    <Form.Control type="password" placeholder="Password" />
 		      </Form.Group>
-			  <Button variant="primary" type="submit">LOGIN</Button>
+			  <Button id="submit-button" variant="primary" type="submit">LOGIN</Button>
 			</Form>
 		  </Col>
 		</Row>

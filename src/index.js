@@ -10,13 +10,26 @@ import WaitingPage from './pages/WaitingPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
 library.add(
   faInfoCircle
 );
 
 ReactDOM.render(
-  <React.StrictMode>
-    <WaitingPage />
-  </React.StrictMode>,
+  <Router>
+    <Switch>
+      <Route exact path="/waiting">
+        <WaitingPage />
+      </Route>
+      <Route path="/">
+        <LoginPage />
+      </Route>
+    </Switch>
+  </Router>,
   document.getElementById('root')
 );

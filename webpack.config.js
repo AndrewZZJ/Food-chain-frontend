@@ -1,5 +1,6 @@
 const Path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require('webpack');
 
 module.exports = {
     entry: { index: Path.resolve(__dirname, "src", "index.js") },
@@ -17,7 +18,11 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: ["babel-loader"]
-            }
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                use: ["file-loader?name=[name].[ext]"]
+            },
         ]
     },
     optimization: {
@@ -26,11 +31,15 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: Path.resolve(__dirname, "src", "index.html")
-        })
+        }),
+        new webpack.ProvidePlugin({
+            "React": "react",
+        }),
     ],
     devServer: {
         open: true,
         hot: true,
-        contentBase: Path.join(__dirname, 'public')
+        contentBase: Path.join(__dirname, 'public'),
+        historyApiFallback: true
     }
 };
