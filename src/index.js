@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import MilestoneCard from './Component/Milestones';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MilestoneCard  src="/Milestone-1.svg"  height="500tx" width="300tx" />
   </React.StrictMode>,
   document.getElementById('root')
 );
