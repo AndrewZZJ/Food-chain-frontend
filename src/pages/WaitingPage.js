@@ -27,32 +27,14 @@ function WaitingPage() {
 	  
 	  <img id="waiting-room-logo" src="/waiting_room.svg" />
 	  <Container id="wrapper">
-		<Row id="player-wrapper"> 
-		  <Col className="player">
-		    <img src="/restaurant-1.svg" alt="brand1" />
-			<b className="player-name">AAA</b>
-			<b className="status ready">Ready</b>
-		  </Col>
-		  <Col className="player">
-		    <img src="/restaurant-2.svg" alt="brand2" />
-			<b className="player-name">BBB</b>
-			<b className="status prepare">PREPARE</b>
-		  </Col>
-		  <Col className="player">
-		    <img src="/restaurant-3.svg" alt="brand3" />
-			<b className="player-name">CCCC</b>
-			<b className="status ready">Ready</b>
-		  </Col>
-		  <Col className="player">
-		    <img src="/restaurant-4.svg" alt="brand4" />
-			<b className="player-name">DDDD</b>
-			<b className="status ready">Ready</b>
-		  </Col>
-		  <Col className="player">
-		    <img src="/restaurant-5.svg" alt="brand5" />
-			<b className="player-name">EE</b>
-			<b className="status ready">Ready</b>
-		  </Col>
+		<Row id="player-wrapper">
+			{[1, 2, 3, 4, 5].map(player => (
+				<Col className="player">
+					<img src={`/restaurant-${player}.svg`} />
+					<b className="player-name">AAA</b>
+					<b className="status">Ready</b>
+				</Col>
+			))}
 		</Row>
 		<Row className="justify-content-md-center" id="confirm-button">
 		  <Button variant= "success" size = "lg">I'M READY</Button>
