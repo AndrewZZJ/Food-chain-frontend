@@ -1,15 +1,15 @@
-import waiting_room from './images/waiting_room.svg';
-import brand1 from './images/restaurant-1.svg';
-import brand2 from './images/restaurant-2.svg';
-import brand3 from './images/restaurant-3.svg';
-import brand4 from './images/restaurant-4.svg';
-import brand5 from './images/restaurant-5.svg';
-import foodChainLogo from './images/logo.svg';
-import infoCircle from './images/info-circle-solid.svg';
-import './App.css';
+import waiting_room from '../images/waiting_room.svg';
+import brand1 from '../images/restaurant-1.svg';
+import brand2 from '../images/restaurant-2.svg';
+import brand3 from '../images/restaurant-3.svg';
+import brand4 from '../images/restaurant-4.svg';
+import brand5 from '../images/restaurant-5.svg';
+import foodChainLogo from '../images/logo.svg';
+import infoCircle from '../images/info-circle-solid.svg';
+import './WaitingPage.css';
 import { Form, Button, FormGroup, FormControl, ControlLabel, Col, Row, Container, Dropdown } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
+import '../index.css';
 import React, { useState, useEffect } from 'react';
 
 //<img src={waiting_room} alt="waiting_room" />
