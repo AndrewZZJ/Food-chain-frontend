@@ -1,7 +1,12 @@
-import {configureStore} from "@reduxjs/toolkit";
+import {compose, createStore, combineReducers} from "@reduxjs/toolkit";
 
-export default configureStore({
-    reducer:{
-        // TODO:
-    }
-});
+import userReducer from "./reducers/user";
+
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+export default createStore(
+    combineReducers({
+        userReducer
+    }),
+    composeEnhancer()
+);
