@@ -40,5 +40,9 @@
 
 @font-face {
   font-family: 'VTC';
-  src: local('VTC'), url(./fonts/VTCSuperMarketSaleRegular.ttf) format('truetype');
+  src: local('VTC'), url(../fonts/VTCSuperMarketSaleRegular.ttf) format('truetype');
+}
+
+.modal-content {
+  width: max-content;
 }
