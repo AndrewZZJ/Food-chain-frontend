@@ -1,13 +1,14 @@
+/* eslint-disable no-undef */
 const Path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const webpack = require('webpack');
+const webpack = require("webpack");
 
-module.exports = {
+module.exports = env => ({
     entry: { index: Path.resolve(__dirname, "src", "index.js") },
     output: {
         path: Path.resolve(__dirname, "build"),
-        publicPath: '/'
+        publicPath: "/"
     },
     module: {
         rules: [
@@ -38,17 +39,20 @@ module.exports = {
         }),
         new CopyPlugin({
             patterns: [
-              {from: "public/**/*", to: "[name].[ext]"},
+                {from: "public/**/*", to: "[name].[ext]"},
             ],
             options: {
-              concurrency: 100,
+                concurrency: 100,
             },
         }),
+        new webpack.EnvironmentPlugin({
+            "API_HOST": env.API_HOST || "http://localhost:3000"
+        })
     ],
     devServer: {
         open: true,
         hot: true,
-        contentBase: Path.join(__dirname, 'public'),
+        contentBase: Path.join(__dirname, "public"),
         historyApiFallback: true
     }
-};
+});
