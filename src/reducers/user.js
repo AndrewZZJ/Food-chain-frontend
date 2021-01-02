@@ -1,4 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
+import {push} from "connected-react-router";
 
 // eslint-disable-next-line no-undef
 const API_HOST = process.env.API_HOST;
@@ -12,9 +13,12 @@ const userSlice = createSlice({
     name: "user",
     initialState,
     reducers: {
-        loginReply(state, action){
+        loginSuccess(state, action){
             state.username = action.payload.username;
             state.token = action.payload.token;
+        },
+        loginError(state){
+            state.token = false;
         }
     }
 });
@@ -29,10 +33,15 @@ export const login = user => dispatch => {
     })
         .then(data => data.json())
         .then(data => {
-            dispatch(userSlice.actions.loginReply({
-                username: user.username,
-                token: data.token,
-            }));
+            if(typeof data.token !== "undefined"){
+                dispatch(userSlice.actions.loginSuccess({
+                    username: user.username,
+                    token: data.token,
+                }));
+                dispatch(push("/waiting"));
+            }else{
+                dispatch(userSlice.actions.loginError());
+            }
         });
 };
 

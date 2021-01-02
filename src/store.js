@@ -1,4 +1,6 @@
 import {compose, createStore, combineReducers, applyMiddleware} from "@reduxjs/toolkit";
+import {connectRouter, routerMiddleware} from "connected-react-router";
+import {createBrowserHistory} from "history";
 
 import userReducer from "./reducers/user";
 
@@ -10,11 +12,17 @@ const asyncFunctionMiddleware = storeAPI => next => action => (
         next(action)
 );
 
+export const history = createBrowserHistory();
+
 export default createStore(
     combineReducers({
-        userReducer
+        router: connectRouter(history),
+        user: userReducer
     }),
     composeEnhancer(
-        applyMiddleware(asyncFunctionMiddleware)
+        applyMiddleware(
+            routerMiddleware(history),
+            asyncFunctionMiddleware
+        )
     )
 );

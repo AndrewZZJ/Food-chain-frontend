@@ -37,14 +37,17 @@ class LoginPage extends React.Component {
                         <img src="/Cover.png" alt="Title screen" />
                     </Col>
                     <Col>
-                        <Form onSubmit={this.onSubmit}>
+                        <Form validated={this.props.token} onSubmit={this.onSubmit}>
                             <Form.Group controlId="formUsername">
                                 <Form.Label>USERNAME</Form.Label>
-                                <Form.Control type="text" placeholder="Username" value={this.state.username} onChange={this.onUsernameChange}/>
+                                <Form.Control type="text" placeholder="Username" value={this.state.username} isInvalid={(this.props.token === false)} onChange={this.onUsernameChange}/>
                             </Form.Group>
                             <Form.Group controlId="formPassword">
                                 <Form.Label>PASSWORD</Form.Label>
-                                <Form.Control type="password" placeholder="Password" value={this.state.password} onChange={this.onPasswordChange}/>
+                                <Form.Control type="password" placeholder="Password" value={this.state.password} isInvalid={(this.props.token === false)} onChange={this.onPasswordChange}/>
+                                <Form.Control.Feedback type="invalid">
+                                    Invalid username or password.
+                                </Form.Control.Feedback>
                             </Form.Group>
                             <Button id="submit-button" variant="primary" type="submit">LOGIN</Button>
                         </Form>
@@ -55,10 +58,14 @@ class LoginPage extends React.Component {
     }
 }
 
-const mapDispatchToProps = (dispatch) => ({
+const mapStateToProps = state => ({
+    token: state.user.token,
+});
+
+const mapDispatchToProps = dispatch => ({
     userLogin(username, password){
         dispatch(login({username, password}));
     }
 });
 
-export default connect(null, mapDispatchToProps)(LoginPage);
+export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);

@@ -12,12 +12,13 @@ import {
     Route
 } from "react-router-dom";
 import {Provider} from "react-redux";
+import {ConnectedRouter} from "connected-react-router";
 
 import LoginPage from "./pages/LoginPage";
 import WaitingPage from "./pages/WaitingPage";
 
 import "./index.css";
-import store from "./store";
+import store, {history} from "./store";
 
 library.add(
     faInfoCircle
@@ -25,7 +26,7 @@ library.add(
 
 ReactDOM.render(
     <Provider store={store}>
-        <Router>
+        <ConnectedRouter history={history}>
             <Switch>
                 <Route exact path="/waiting">
                     <WaitingPage />
@@ -34,7 +35,7 @@ ReactDOM.render(
                     <LoginPage />
                 </Route>
             </Switch>
-        </Router>
+        </ConnectedRouter>
     </Provider>,
     document.getElementById("root")
 );
