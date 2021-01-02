@@ -1,0 +1,26 @@
+#navbar{
+  height: 50px;
+  background-color: inherit;
+  border-bottom: 1px solid #707070;
+}
+
+#navbar img{
+  height: 30px;
+}
+
+#navdrop{
+  letter-spacing: 1px;
+  color: #262727;
+}
+
+.dropdown-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1em;
+}
+
+@font-face {
+  font-family: 'VTCSuperMarketSaleRegular';
+  src: url('../fonts/VTCSuperMarketSaleRegular.ttf') format('truetype');
+}

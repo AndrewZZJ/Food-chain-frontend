@@ -7,23 +7,6 @@
   letter-spacing: 2px;
 }
 
-#navbar{
-  height: 50px;
-  background-color: inherit;
-  border-bottom: 1px solid #707070;
-}
-
-#navbar img{
-  height: 30px;
-}
-
-#drop-down .dropdown-item{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 5px;
-}
-
 #waiting-room-logo {
   position: absolute;
   left: 6.875%;
