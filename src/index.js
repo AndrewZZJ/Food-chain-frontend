@@ -19,6 +19,7 @@ import {ConnectedRouter} from "connected-react-router";
 import Socket from "./components/Socket";
 import LoginPage from "./pages/LoginPage";
 import WaitingPage from "./pages/WaitingPage";
+import GamePage from "./pages/GamePage";
 import WaitingEvents from "./events/WaitingRoom";
 
 import "./index.css";
@@ -36,6 +37,9 @@ ReactDOM.render(
         ]}/>
         <ConnectedRouter history={history}>
             <Switch>
+                <Route exact path="/game">
+                    <GamePage />
+                </Route>
                 <Route exact path="/waiting">
                     <WaitingPage />
                 </Route>

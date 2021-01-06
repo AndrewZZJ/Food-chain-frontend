@@ -1,7 +1,9 @@
 import {updatePlayers} from "../reducers/user";
+import {push} from "connected-react-router";
 
 function handleLaunch(dispatch, data){
-    console.log(data); // TODO:
+    dispatch(updatePlayers(data.players));
+    dispatch(push("/game"));
 }
 
 function handlePlayerListUpdate(dispatch, data){
