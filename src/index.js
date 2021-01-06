@@ -13,6 +13,7 @@ import {
 import {Provider} from "react-redux";
 import {ConnectedRouter} from "connected-react-router";
 
+import Socket from "./components/Socket";
 import LoginPage from "./pages/LoginPage";
 import WaitingPage from "./pages/WaitingPage";
 
@@ -25,6 +26,7 @@ library.add(
 
 ReactDOM.render(
     <Provider store={store}>
+        <Socket />
         <ConnectedRouter history={history}>
             <Switch>
                 <Route exact path="/waiting">
