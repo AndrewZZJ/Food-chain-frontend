@@ -3,6 +3,7 @@ import {connectRouter, routerMiddleware} from "connected-react-router";
 import {createBrowserHistory} from "history";
 
 import userReducer from "./reducers/user";
+import socketReducer from "./reducers/socket";
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -17,7 +18,8 @@ export const history = createBrowserHistory();
 export default createStore(
     combineReducers({
         router: connectRouter(history),
-        user: userReducer
+        user: userReducer,
+        socket: socketReducer,
     }),
     composeEnhancer(
         applyMiddleware(

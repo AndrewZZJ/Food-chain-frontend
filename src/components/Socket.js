@@ -12,11 +12,17 @@ function Socket(props){
             createSocket(io(API_HOST, {auth: {token: props.token}}));
         }
     }, [props.token]);
+    useEffect(() => {
+        if(socket){
+            socket.emit(props.message.event, props.message.data);
+        }
+    }, [props.message]);
     return null;
 }
 
 const mapStateToProps = state => ({
     token: state.user.token,
+    message: state.socket.message,
 });
 
 export default connect(mapStateToProps, null)(Socket);

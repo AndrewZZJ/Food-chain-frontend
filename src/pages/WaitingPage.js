@@ -1,10 +1,13 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Button, Col, Row, Container } from "react-bootstrap";
+
+import {emit} from "../reducers/socket";
 
 import NaviBar from "../components/NaviBar";
 import "./WaitingPage.css";
 
-function WaitingPage() {
+function WaitingPage(props) {
     return (
         <div id="waiting-page">
             <NaviBar />
@@ -20,10 +23,22 @@ function WaitingPage() {
                     ))}
                 </Row>
                 <Row className="justify-content-md-center" id="confirm-button">
-                    <Button variant= "success" size = "lg">I&apos;M READY</Button>
+                    <Button variant= "success" size = "lg" onClick={props.prepared}>
+                        I&apos;M READY
+                    </Button>
                 </Row>
             </Container>
         </div>);
 }
 
-export default WaitingPage;
+const mapStateToProps = state => ({
+
+});
+
+const mapDispatchToProps = dispatch => ({
+    prepared: () => {
+        dispatch(emit("preparation", {prepared: true})); // FIXME:
+    }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(WaitingPage);
