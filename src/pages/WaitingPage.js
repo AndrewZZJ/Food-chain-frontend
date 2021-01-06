@@ -14,6 +14,9 @@ function WaitingPage(props) {
             props.prepared(!props.players[props.username].prepared);
         }
     }
+    function onExchangeClick(index){
+        props.exchange(index);
+    }
     return (
         <div id="waiting-page">
             <NaviBar />
@@ -27,7 +30,7 @@ function WaitingPage(props) {
                                 <img src={`/restaurant-${index + 1}.svg`} style={{opacity: player ? 1 : 0.25}}/>
                                 {player ? 
                                     <b className="player-name">{player[0]}</b> :
-                                    <Button size="lg" variant="outline-secondary">
+                                    <Button size="lg" variant="outline-secondary" onClick={onExchangeClick.bind(this, index)}>
                                         <FontAwesomeIcon icon="exchange-alt" />
                                     </Button>
                                 }
@@ -61,7 +64,10 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     prepared: isReady => {
-        dispatch(emit("preparation", {prepared: isReady})); // FIXME:
+        dispatch(emit("preparation", {prepared: isReady}));
+    },
+    exchange: index => {
+        dispatch(emit("exchange_place", {index}));
     }
 });
 
