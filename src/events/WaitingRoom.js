@@ -1,10 +1,11 @@
+import {updatePlayers} from "../reducers/user";
 
 function handleLaunch(dispatch, data){
-    console.log(data);
+    console.log(data); // TODO:
 }
 
 function handlePlayerListUpdate(dispatch, data){
-    console.log(data);
+    dispatch(updatePlayers(data.players));
 }
 
 export default {

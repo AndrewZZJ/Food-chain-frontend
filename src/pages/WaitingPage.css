@@ -22,6 +22,7 @@
 
 #confirm-button {
   padding: 20px;
+  letter-spacing: 2px;
 }
 
 #player-wrapper{
@@ -34,6 +35,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+#ready-message{
+  font-size: 1.8em;
 }
 
 .player-name{
