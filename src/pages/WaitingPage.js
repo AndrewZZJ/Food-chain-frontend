@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
 import React from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -62,7 +62,8 @@ function WaitingPage(props) {
 WaitingPage.propTypes = {
     username: PropTypes.string,
     players: PropTypes.object,
-    emit: PropTypes.func,
+    prepared: PropTypes.func.isRequired,
+    exchange: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({

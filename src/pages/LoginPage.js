@@ -1,5 +1,5 @@
+import React from "react";
 import PropTypes from "prop-types";
-import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Button, Form } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
@@ -66,8 +66,8 @@ function LoginPage(props) {
 }
 
 LoginPage.propTypes = {
-    token: PropTypes.string,
-    userLogin: PropTypes.func,
+    token: PropTypes.any,
+    userLogin: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
