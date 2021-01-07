@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Button, Col, Row, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {Redirect} from "react-router";
 
 import {emit} from "../reducers/socket";
 
@@ -9,6 +10,9 @@ import NaviBar from "../components/NaviBar";
 import "./WaitingPage.css";
 
 function WaitingPage(props) {
+    if(!props.username){
+        return <Redirect to="/" />;
+    }
     function onPreparedClick(){
         if(props.players && props.username){
             props.prepared(!props.players[props.username].prepared);
