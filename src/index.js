@@ -10,16 +10,20 @@ import {
     faMinusCircle
 } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Provider } from "react-redux";
 
 import "./font.css";
 import "./index.css";
 
+// React router
+import {Provider} from "react-redux";
+
+// Imports
 import Socket from "./components/Socket";
 
 import store from "./store";
 import RouterWithRedux from "./RouterWithRedux";
 
+// Font awesome library
 library.add(
     faInfoCircle,
     faExchangeAlt,
@@ -27,6 +31,7 @@ library.add(
     faMinusCircle,
 );
 
+// Main entry
 ReactDOM.render(
     <Provider store={store}>
         <Socket/>
