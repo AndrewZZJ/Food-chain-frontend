@@ -3,7 +3,10 @@ import ReactDOM from "react-dom";
 
 // Font awesome
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import {
+    faInfoCircle,
+    faExchangeAlt,
+} from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import {
@@ -13,20 +16,30 @@ import {
 import {Provider} from "react-redux";
 import {ConnectedRouter} from "connected-react-router";
 
+import Socket from "./components/Socket";
 import LoginPage from "./pages/LoginPage";
 import WaitingPage from "./pages/WaitingPage";
+import GamePage from "./pages/GamePage";
+import WaitingEvents from "./events/WaitingRoom";
 
 import "./index.css";
 import store, {history} from "./store";
 
 library.add(
-    faInfoCircle
+    faInfoCircle,
+    faExchangeAlt
 );
 
 ReactDOM.render(
     <Provider store={store}>
+        <Socket events={[
+            WaitingEvents
+        ]}/>
         <ConnectedRouter history={history}>
             <Switch>
+                <Route exact path="/game">
+                    <GamePage />
+                </Route>
                 <Route exact path="/waiting">
                     <WaitingPage />
                 </Route>

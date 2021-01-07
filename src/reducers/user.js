@@ -6,6 +6,7 @@ const API_HOST = process.env.API_HOST;
 
 const initialState = {
     username: null,
+    players: {},
     token: null, // TODO: save token to cookie
 };
   
@@ -19,6 +20,9 @@ const userSlice = createSlice({
         },
         loginError(state){
             state.token = false;
+        },
+        updatePlayers(state, action){
+            state.players = action.payload;
         }
     }
 });
@@ -44,5 +48,5 @@ export const login = user => dispatch => {
             }
         });
 };
-
+export const {updatePlayers} = userSlice.actions;
 export default userSlice.reducer;
