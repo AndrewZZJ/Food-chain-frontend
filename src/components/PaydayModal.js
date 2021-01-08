@@ -5,10 +5,12 @@ import Button from "react-bootstrap/Button";
 import {Col, Row} from "react-bootstrap";
 import CardGallery from "./CardGallery";
 
+import "./PaydayModal.css";
+
 const PaydayModal = (props) => {
 
     const [selectedCards, setSelection] = useState([]);
-    return (<Modal.Dialog size={"xl"}>
+    return (<Modal.Dialog id="payday-modal" size={"xl"}>
         <Modal.Header>
             <Modal.Title>PAYDAY</Modal.Title>
         </Modal.Header>
@@ -16,14 +18,14 @@ const PaydayModal = (props) => {
         <Modal.Body>
             <Row>
                 <Col>
-                    <p style={{ color: "rgb(182,62,55)" }}>SALARIES TO PAY: ${
+                    <p id="payday-modal-salaries">SALARIES TO PAY: ${
                         props.employees
                             .filter((e, i) => !selectedCards.includes(`${i}`))
                             .reduce((sum, employee) => sum + (employee.salary ? 5 : 0), 0)
                     }</p>
                 </Col>
                 <Col>
-                    <p style={{ textAlign: "end" }}>YOUR BALANCE: ${props.balance}</p>
+                    <p id="payday-modal-balance">YOUR BALANCE: ${props.balance}</p>
                 </Col>
             </Row>
             <Row>
@@ -34,7 +36,7 @@ const PaydayModal = (props) => {
                     }}
                 />
             </Row>
-            <Row style={{justifyContent: "center"}}>
+            <Row id="payday-modal-footer">
                 <Button
                     variant={selectedCards.length ? "danger" : "success"}
                     onClick={() => props.onConfirm?.(selectedCards)}

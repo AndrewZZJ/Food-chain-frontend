@@ -1,5 +1,9 @@
 import PropTypes from "prop-types";
 import React, {useState} from "react";
+import {Row} from "react-bootstrap";
+import {ReactSVG} from "react-svg";
+
+import "./CardGallery.css";
 
 /**
  * This component draws a row of cards and user may select some of them.
@@ -23,19 +27,13 @@ const CardGallery = (props) => {
         gapOffset = 30 - cardWidth;
     }
     return (
-        <div
-            className="row"
-            style={{
-                height: props.cardHeight + 50,
-                position: "relative",
-                marginLeft: 10,
-                marginRight: 10,
-                justifyContent: "space-between"
-            }}>
+        <Row className="card-gallery"
+            style={{height: props.cardHeight + 50}}>
             {props.cards.map((card, index) => (
-                <img
-                    style={Object.assign({},
-                        { position: "absolute", left: (gapOffset + cardWidth) * index, top: 25 },
+                <ReactSVG
+                    className="card-gallery-image"
+                    style={Object.assign(
+                        {left: (gapOffset + cardWidth) * index},
                         selected[index] && { top: 0 },
                         index === pointedIndex && { zIndex: 10 },
                     )}
@@ -62,7 +60,7 @@ const CardGallery = (props) => {
                     height={props.cardHeight}
                 />
             ))}
-        </div>
+        </Row>
     );
 };
 
