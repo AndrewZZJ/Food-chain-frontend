@@ -28,14 +28,13 @@ const PaydayModal = (props) => {
                     <p id="payday-modal-balance">YOUR BALANCE: ${props.balance}</p>
                 </Col>
             </Row>
-            <Row>
-                <CardGallery
-                    cards={props.employees.map(e => e.image)}
-                    onSelected={(arr) => {
-                        setSelection(arr);
-                    }}
-                />
-            </Row>
+            <CardGallery
+                id="payday-modal-cards"
+                cards={props.employees.map(e => e.image)}
+                onSelected={(arr) => {
+                    setSelection(arr);
+                }}
+            />
             <Row id="payday-modal-footer">
                 <Button
                     variant={selectedCards.length ? "danger" : "success"}
