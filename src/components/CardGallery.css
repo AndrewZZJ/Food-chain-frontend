@@ -1,0 +1,11 @@
+.card-gallery{
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: space-between;
+}
+
+.card-gallery-image{
+    position: absolute;
+    top: 25px;
+}
