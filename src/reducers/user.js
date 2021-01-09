@@ -1,7 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {push} from "connected-react-router";
 
-// eslint-disable-next-line no-undef
 const API_HOST = process.env.API_HOST;
 
 const initialState = {
@@ -9,7 +8,7 @@ const initialState = {
     players: {},
     token: null, // TODO: save token to cookie
 };
-  
+
 const userSlice = createSlice({
     name: "user",
     initialState,

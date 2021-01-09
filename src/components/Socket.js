@@ -2,7 +2,6 @@ import {useState, useEffect} from "react";
 import { connect } from "react-redux";
 import {io} from "socket.io-client";
 
-// eslint-disable-next-line no-undef
 const API_HOST = process.env.API_HOST;
 
 function Socket(props){
