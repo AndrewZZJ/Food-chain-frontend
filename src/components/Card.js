@@ -1,10 +1,17 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { Card } from "react-bootstrap";
+import { ReactSVG } from "react-svg";
 
 
 function EmployeeCard(props) {
-    return (<Card.Img variant="top" src={props.src} height={props.height} width={props.width}/>);
+    return (<ReactSVG 
+        {...props}
+        src={props.src}
+        style={{
+            height: props.height,
+            width: props.width,
+        }}
+    />);
 }
 
 EmployeeCard.propTypes = {

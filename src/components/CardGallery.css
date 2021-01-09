@@ -1,11 +1,31 @@
 .card-gallery{
     position: relative;
-    margin-left: 10px;
-    margin-right: 10px;
-    justify-content: space-between;
+    display: block;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-left: 0;
 }
 
 .card-gallery-image{
     position: absolute;
-    top: 25px;
+    height: 100%;
+}
+
+.card-gallery-image div, .card-gallery-image svg{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+}
+.card-gallery-image svg{
+    border: 1px solid #FFFFFF;
+}
+
+.card-gallery-image:hover{
+    z-index: 10;
+}
+
+.card-gallery-image:hover div{
+    box-shadow: 0 0 3px 3px #FFFFFF;
 }
