@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
 import React from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Dropdown, DropdownButton, Nav, Navbar } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -23,7 +23,7 @@ function NaviBar(props) {
 }
 
 NaviBar.propTypes = {
-    username: PropTypes.string.isRequired,
+    username: PropTypes.string,
 };
 
 const mapStateToProps = state => ({
