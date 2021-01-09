@@ -1,5 +1,4 @@
-import {createSlice} from "@reduxjs/toolkit";
-import {push} from "connected-react-router";
+import { createSlice } from "@reduxjs/toolkit";
 
 const API_HOST = process.env.API_HOST;
 
@@ -41,7 +40,6 @@ export const login = user => dispatch => {
                     username: user.username,
                     token: data.token,
                 }));
-                dispatch(push("/waiting"));
             }else{
                 dispatch(userSlice.actions.loginError());
             }
