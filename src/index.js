@@ -3,27 +3,15 @@ import ReactDOM from "react-dom";
 
 // Font awesome
 import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-    faInfoCircle,
-    faExchangeAlt,
-} from "@fortawesome/free-solid-svg-icons";
+import { faExchangeAlt, faInfoCircle, } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-import {
-    Switch,
-    Route
-} from "react-router-dom";
-import {Provider} from "react-redux";
-import {ConnectedRouter} from "connected-react-router";
+import { Provider } from "react-redux";
 
 import Socket from "./components/Socket";
-import LoginPage from "./pages/LoginPage";
-import WaitingPage from "./pages/WaitingPage";
-import GamePage from "./pages/GamePage";
-import WaitingEvents from "./events/WaitingRoom";
 
 import "./index.css";
-import store, {history} from "./store";
+import store from "./store";
+import RouterWithRedux from "./RouterWithRedux";
 
 library.add(
     faInfoCircle,
@@ -32,22 +20,8 @@ library.add(
 
 ReactDOM.render(
     <Provider store={store}>
-        <Socket events={[
-            WaitingEvents
-        ]}/>
-        <ConnectedRouter history={history}>
-            <Switch>
-                <Route exact path="/game">
-                    <GamePage />
-                </Route>
-                <Route exact path="/waiting">
-                    <WaitingPage />
-                </Route>
-                <Route path="/">
-                    <LoginPage />
-                </Route>
-            </Switch>
-        </ConnectedRouter>
+        <Socket/>
+        <RouterWithRedux/>
     </Provider>,
     document.getElementById("root")
 );

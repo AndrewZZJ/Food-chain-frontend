@@ -1,14 +1,15 @@
-import {compose, createStore, combineReducers, applyMiddleware} from "@reduxjs/toolkit";
-import {connectRouter, routerMiddleware} from "connected-react-router";
-import {createBrowserHistory} from "history";
+import { applyMiddleware, combineReducers, compose, createStore } from "@reduxjs/toolkit";
+import { connectRouter, routerMiddleware } from "connected-react-router";
+import { createBrowserHistory } from "history";
 
 import userReducer from "./reducers/user";
 import socketReducer from "./reducers/socket";
+import gameReducer from "./reducers/game";
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const asyncFunctionMiddleware = storeAPI => next => action => (
-    (typeof action === "function") ? 
+    (typeof action === "function") ?
         action(storeAPI.dispatch, storeAPI.getState) :
         next(action)
 );
@@ -20,6 +21,7 @@ export default createStore(
         router: connectRouter(history),
         user: userReducer,
         socket: socketReducer,
+        game: gameReducer,
     }),
     composeEnhancer(
         applyMiddleware(

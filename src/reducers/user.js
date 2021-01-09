@@ -1,15 +1,12 @@
-import {createSlice} from "@reduxjs/toolkit";
-import {push} from "connected-react-router";
+import { createSlice } from "@reduxjs/toolkit";
 
-// eslint-disable-next-line no-undef
 const API_HOST = process.env.API_HOST;
 
 const initialState = {
     username: null,
-    players: {},
     token: null, // TODO: save token to cookie
 };
-  
+
 const userSlice = createSlice({
     name: "user",
     initialState,
@@ -42,7 +39,6 @@ export const login = user => dispatch => {
                     username: user.username,
                     token: data.token,
                 }));
-                dispatch(push("/waiting"));
             }else{
                 dispatch(userSlice.actions.loginError());
             }
