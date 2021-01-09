@@ -1,23 +1,25 @@
-import './ChooseReserveCard.css';
+import "./ChooseReserveCard.css";
 import card300 from "../images/Reserve-1.svg";
 import card100 from "../images/Reserve-2.svg";
 import card200 from "../images/Reserve-3.svg";
-import {Modal, Col, Row, Container, Button} from 'react-bootstrap';
-import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button, Col, Container, Modal, Row } from "react-bootstrap";
+import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function ChooseReserveCard() {
 
     const [show, setShow] = useState(false);
-    const [chosenCard, setChosenCard] = useState('200');
+    const [chosenCard, setChosenCard] = useState("200");
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const selectReserve = (value) => {setChosenCard(value)};
+    const selectReserve = (value) => {
+        setChosenCard(value);
+    };
 
     const buttonStyle = {
         padding: 0
-    }
+    };
 
     return (
         <>

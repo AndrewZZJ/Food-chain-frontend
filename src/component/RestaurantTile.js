@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Card } from "react-bootstrap";
+import PropTypes from "prop-types";
 
-
-function House(props) {
+function RestaurantTile(props) {
     return (
         <Card.Img
             variant="top"
@@ -14,15 +13,15 @@ function House(props) {
     );
 }
 
-House.propTypes = {
+RestaurantTile.propTypes = {
     src: PropTypes.string.isRequired,
     height: PropTypes.oneOf([PropTypes.number, PropTypes.string]).isRequired,
     width: PropTypes.oneOf([PropTypes.number, PropTypes.string]).isRequired,
     rotate: PropTypes.number,
 };
 
-House.defaultProps = {
+RestaurantTile.defaultProps = {
     rotate: 0,
 };
 
-export default House;
+export default RestaurantTile;

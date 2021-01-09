@@ -2,8 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Card } from "react-bootstrap";
 
-
-function House(props) {
+function MarketingTile(props) {
     return (
         <Card.Img
             variant="top"
@@ -14,15 +13,15 @@ function House(props) {
     );
 }
 
-House.propTypes = {
+MarketingTile.propTypes = {
     src: PropTypes.string.isRequired,
     height: PropTypes.oneOf([PropTypes.number, PropTypes.string]).isRequired,
     width: PropTypes.oneOf([PropTypes.number, PropTypes.string]).isRequired,
     rotate: PropTypes.number,
 };
 
-House.defaultProps = {
+MarketingTile.defaultProps = {
     rotate: 0,
 };
 
-export default House;
+export default MarketingTile;
