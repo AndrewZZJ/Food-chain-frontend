@@ -1,5 +1,5 @@
 #login-page{
-    font-family: "VTCSuperMarketSaleRegular";
+    font-family: "VTCSuperMarketSale";
     letter-spacing: 1px;
     font-size: 1.5em;
 }
@@ -10,9 +10,4 @@
 
 #submit-button{
     letter-spacing: 1px;
-}
-
-@font-face {
-    font-family: 'VTCSuperMarketSaleRegular';
-    src: url('../fonts/VTCSuperMarketSaleRegular.ttf') format('truetype');
 }

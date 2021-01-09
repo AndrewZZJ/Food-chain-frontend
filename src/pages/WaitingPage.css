@@ -52,8 +52,3 @@
   display: block;
   font-weight: normal;
 }
-
-@font-face {
-  font-family: 'VTCSuperMarketSaleRegular';
-  src: url('../fonts/VTCSuperMarketSaleRegular.ttf') format('truetype');
-}

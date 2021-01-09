@@ -1,0 +1,41 @@
+#food-modal{
+    font-family: 'VTCSuperMarketSale';
+    letter-spacing: 1px;
+}
+
+#food-modal-body .row{
+    margin: 1em 0;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.food-modal-icon svg{
+    width: 5em;
+    height: 5em;
+}
+
+#food-modal-row1{
+    font-size: 1.5em;
+}
+
+#food-modal-row2{
+    color: #CB2E25;
+    font-size: 1.5em;
+}
+
+#food-modal-footer{
+    justify-content: center;
+}
+
+#food-modal-footer button{
+    font-size: 1.2em;
+}
+
+.food-modal-quota{
+    font-size: 1.3em;
+    color: #FFFFFF;
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    text-shadow: 1px 1px #777777;
+}

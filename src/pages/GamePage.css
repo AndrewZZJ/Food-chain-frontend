@@ -3,11 +3,6 @@
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  font-family: "VTCSuperMarketSaleRegular";
+  font-family: "VTCSuperMarketSale";
   letter-spacing: 2px;
-}
-
-@font-face {
-  font-family: 'VTCSuperMarketSaleRegular';
-  src: url('../fonts/VTCSuperMarketSaleRegular.ttf') format('truetype');
 }
