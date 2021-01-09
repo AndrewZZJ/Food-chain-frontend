@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { io } from "socket.io-client";
 import { updateSocketEvent } from "../reducers/socket";
@@ -29,6 +30,13 @@ function Socket(props) {
 
     return null;
 }
+
+Socket.propTypes = {
+    token: PropTypes.any,
+    events: PropTypes.array.isRequired,
+    dispatch: PropTypes.func.isRequired,
+    message: PropTypes.any,
+};
 
 const mapStateToProps = state => ({
     token: state.user.token,
