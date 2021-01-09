@@ -71,11 +71,13 @@ class CardGallery extends React.Component{
                         className="card-gallery-image"
                         key={index}
                         src={card}
+                        width={this.state.cardWidth}
+                        height={this.state.height}
                         style={{
-                            width: this.state.cardWidth,
-                            height: this.state.height,
                             left: this.state.offset * index,
                             top: (this.state.selected[index]) ? 0 : "5%",
+                            width: this.state.cardWidth,
+                            height: this.state.height
                         }}
                         onClick={this.onCardClick.bind(this, index)}
                     />
