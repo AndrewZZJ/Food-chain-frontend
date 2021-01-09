@@ -6,6 +6,8 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import "./FoodModal.css";
 
+const foodKeys = ["lemonade", "beer", "coke", "pizza", "burger"];
+
 const FoodModal = (props) => {
     return (<Modal.Dialog id="food-modal" size={"lg"}>
         <Modal.Header>
@@ -14,29 +16,29 @@ const FoodModal = (props) => {
         <Modal.Body id="food-modal-body">
             <Row>
                 <Col></Col>
-                {[0, 1, 2, 3, 4].map(index => (
-                    <Col key={index}>
-                        <ReactSVG className="food-modal-icon" src={`/Foods-${index + 1}.svg`}/>
-                        {(props.quota && props.quota[index]) ? <b className="food-modal-quota">{props.quota[index]}</b> : ""}
+                {foodKeys.map(key => (
+                    <Col key={key}>
+                        <ReactSVG className="food-modal-icon" src={`/Foods-${key}.svg`}/>
+                        {props.quota?.[key] ? <b className="food-modal-quota">{props.quota[key]}</b> : ""}
                     </Col>
                 ))}
             </Row>
             {props.resultOnly ? "" :
                 <Row id="food-modal-row1">
                     <Col>{props.header1}</Col>
-                    {[0, 1, 2, 3, 4].map(index => (
-                        <Col key={index}>
-                            <FontAwesomeIcon icon="plus-circle" onClick={props.onPlus.bind(this, index)}/>
-                            &nbsp;{props.value[index]}&nbsp;
-                            <FontAwesomeIcon icon="minus-circle" onClick={props.onMinus.bind(this, index)}/>
+                    {foodKeys.map(key => (
+                        <Col key={key}>
+                            <FontAwesomeIcon icon="plus-circle" onClick={props.onPlus.bind(this, key)}/>
+                            &nbsp;{props.value[key]}&nbsp;
+                            <FontAwesomeIcon icon="minus-circle" onClick={props.onMinus.bind(this, key)}/>
                         </Col>
                     ))}
                 </Row>
             }
             <Row id="food-modal-row2">
                 <Col>{props.header2}</Col>
-                {[0, 1, 2, 3, 4].map(index => (
-                    <Col key={index}>{props.result[index]}</Col>
+                {foodKeys.map(key => (
+                    <Col key={key}>{props.result[key]}</Col>
                 ))}
             </Row>
             <Row id="food-modal-footer">
@@ -57,9 +59,27 @@ FoodModal.propTypes = {
     header1: PropTypes.string.isRequired,
     header2: PropTypes.string.isRequired,
     onConfirm: PropTypes.func,
-    quota: PropTypes.array,
-    value: PropTypes.array.isRequired,
-    result: PropTypes.array.isRequired,
+    quota: PropTypes.shape({
+        pizza: PropTypes.number,
+        burger: PropTypes.number,
+        lemonade: PropTypes.number,
+        beer: PropTypes.number,
+        coke: PropTypes.number,
+    }).isRequired,
+    value: PropTypes.shape({
+        pizza: PropTypes.number,
+        burger: PropTypes.number,
+        lemonade: PropTypes.number,
+        beer: PropTypes.number,
+        coke: PropTypes.number,
+    }).isRequired,
+    result: PropTypes.shape({
+        pizza: PropTypes.number,
+        burger: PropTypes.number,
+        lemonade: PropTypes.number,
+        beer: PropTypes.number,
+        coke: PropTypes.number,
+    }).isRequired,
     onPlus: PropTypes.func,
     onMinus: PropTypes.func,
     resultOnly: PropTypes.bool,

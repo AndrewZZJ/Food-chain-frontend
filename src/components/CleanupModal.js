@@ -5,20 +5,22 @@ import FoodModal from "./FoodModal";
 import "./FoodModal.css";
 
 const CleanupModal = (props) => {
-    const [value, setValue] = useState([0, 0, 0, 0, 0]);
-    function onPlus(index){
-        const sumValue = value.reduce((sum, val) => (sum + val), 0);
-        if(((props.initValue[index] - (value[index] + 1)) >= 0) && (sumValue < 10)){
-            let newValue = [...value];
-            newValue[index] += 1;
-            setValue(newValue);
+    const [value, setValue] = useState({
+        pizza: 0,
+        burger: 0,
+        lemonade: 0,
+        beer: 0,
+        coke: 0,
+    });
+    function onPlus(foodName){
+        const sumValue = Object.values(value).reduce((sum, val) => (sum + val), 0);
+        if(((props.initValues[foodName] - (value[foodName] + 1)) >= 0) && (sumValue < 10)){
+            setValue({...value, [foodName]: value[foodName] + 1});
         }
     }
-    function onMinus(index){
-        if((value[index] - 1) >= 0){
-            let newValue = [...value];
-            newValue[index] -= 1;
-            setValue(newValue);
+    function onMinus(foodName){
+        if((value[foodName] - 1) >= 0){
+            setValue({...value, [foodName]: value[foodName] - 1});
         }
     }
     function onConfirm(){
@@ -30,8 +32,8 @@ const CleanupModal = (props) => {
             header1="store"
             header2="drop"
             value={value}
-            resultOnly={props.resultOnly}
-            result={props.initValue.map((init, index) => (init - value[index]))}
+            resultOnly={!props.hasFridge}
+            result={Object.entries(props.initValues).reduce((obj, [key, val]) => ({...obj, [key]: val - value[key]}), {})}
             onPlus={onPlus}
             onMinus={onMinus}
             onConfirm={onConfirm}
@@ -40,9 +42,15 @@ const CleanupModal = (props) => {
 };
 
 CleanupModal.propTypes = {
-    initValue: PropTypes.array.isRequired,
+    initValues: PropTypes.shape({
+        pizza: PropTypes.number,
+        burger: PropTypes.number,
+        lemonade: PropTypes.number,
+        beer: PropTypes.number,
+        coke: PropTypes.number,
+    }).isRequired,
     onConfirm: PropTypes.func,
-    resultOnly: PropTypes.bool,
+    hasFridge: PropTypes.bool,
 };
 
 export default CleanupModal;
