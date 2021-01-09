@@ -8,7 +8,7 @@ function SelectOrder(props){
     return (
         <Modal id="select-order-modal" centered show={props.show}>
             <Modal.Header id="select-order-header">
-                <Modal.Title>Select order - {props.user}</Modal.Title>
+                <Modal.Title>Select order - {props.user}'s turn</Modal.Title>
             </Modal.Header>
             <Modal.Body id="select-order-body">
                 <img id="select-order-back" src="/TurnOrder.svg" />
@@ -31,7 +31,7 @@ SelectOrder.propTypes = {
     user: PropTypes.string.isRequired,
     show: PropTypes.bool,
     isWaiting: PropTypes.bool,
-    orders: PropTypes.array.isRequired,
+    orders: PropTypes.arrayOf(PropTypes.number).isRequired,
     onSelect: PropTypes.func.isRequired,
 };
 
