@@ -64,6 +64,7 @@ WaitingPage.propTypes = {
     players: PropTypes.object,
     prepared: PropTypes.func.isRequired,
     exchange: PropTypes.func.isRequired,
+    emit: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
