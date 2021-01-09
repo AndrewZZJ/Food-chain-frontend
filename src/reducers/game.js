@@ -10,8 +10,14 @@ export default (state = initialState, action) => {
         return {
             ...state,
             isPlaying: true,
-            spectaculars: action.message.spectaculars,
-            players: action.message.players,
+            spectaculars: action.payload.spectaculars,
+            players: action.payload.players,
+        };
+    case "socket/update/player_list_update":
+        return {
+            ...state,
+            spectaculars: action.payload.spectaculars,
+            players: action.payload.players,
         };
     default:
         return state;

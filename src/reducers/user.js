@@ -4,7 +4,6 @@ const API_HOST = process.env.API_HOST;
 
 const initialState = {
     username: null,
-    players: {},
     token: null, // TODO: save token to cookie
 };
 
