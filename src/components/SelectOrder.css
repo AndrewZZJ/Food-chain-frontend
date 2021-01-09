@@ -1,0 +1,83 @@
+#select-order-modal{
+    font-family: 'VTCSuperMarketSaleRegular';
+    letter-spacing: 2px;
+}
+
+#select-order-header{
+    background-color: #1a1311;
+    color: #ffffff;
+}
+
+#select-order-body{
+    padding: 0;
+    background-color: #fff5e0;
+    border-radius: .3rem;
+    padding-right: .3rem;
+}
+
+#select-order-back{
+    width: 100%;
+}
+
+#select-order-wrapper{
+    display: flex;
+    position: absolute;
+    width: 96%;
+    height: 38.75%;
+    top: 56.6%;
+    left: 2.36%;
+}
+
+.select-order-place{
+    width: 20%;
+    height: 100%;
+}
+
+.select-order-restaurant{
+    width: 77.88%;
+    height: 77%;
+    margin-top: 11.5%;
+    margin-left: 10%;
+}
+
+.select-order-place{
+    width: 20%;
+    height: 100%;
+}
+
+.select-order-empty{
+    width: 20%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: normal;
+    font-family: 'AveriaSerifLibre';
+}
+
+.select-order-waiting{
+    width: 20%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: 'AveriaSerifLibre';
+}
+
+.select-order-empty button{
+    font-size: 1em;
+    color: #1a1311;
+}
+
+@font-face {
+    font-family: 'VTCSuperMarketSaleRegular';
+    src: url('../fonts/VTCSuperMarketSaleRegular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'AveriaSerifLibre';
+    src: url('../fonts/AveriaSerifLibre-Regular.ttf') format('truetype');
+}
