@@ -19,8 +19,3 @@
   justify-content: space-between;
   padding: 0 1em;
 }
-
-@font-face {
-  font-family: 'VTCSuperMarketSaleRegular';
-  src: url('../fonts/VTCSuperMarketSaleRegular.ttf') format('truetype');
-}

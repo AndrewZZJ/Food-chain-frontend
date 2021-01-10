@@ -1,7 +1,3 @@
-#payday-modal{
-    font-family: 'VTCSuperMarketSale';
-}
-
 #payday-modal-salaries{
     font-size: 1.5em;
     color: rgb(182,62,55);
@@ -25,9 +21,4 @@
     margin-top: 10px;
     font-size: 1.5em;
     letter-spacing: 2px;
-}
-
-@font-face {
-    font-family: 'VTCSuperMarketSale';
-    src: url('../fonts/VTCSuperMarketSaleRegular.ttf') format('truetype');
 }
