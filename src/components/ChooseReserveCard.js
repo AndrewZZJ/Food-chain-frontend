@@ -1,67 +1,43 @@
-import "./ChooseReserveCard.css";
-import card300 from "../images/Reserve-1.svg";
-import card100 from "../images/Reserve-2.svg";
-import card200 from "../images/Reserve-3.svg";
+
+import React from "react";
+import PropTypes from "prop-types";
 import { Button, Col, Container, Modal, Row } from "react-bootstrap";
-import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 
-function ChooseReserveCard() {
+import "./ChooseReserveCard.css";
 
-    const [show, setShow] = useState(false);
-    const [chosenCard, setChosenCard] = useState("200");
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-    const selectReserve = (value) => {
-        setChosenCard(value);
-    };
-
-    const buttonStyle = {
-        padding: 0
-    };
-
+function ChooseReserveCard(props) {
     return (
-        <>
-            <Button variant="primary" onClick={handleShow}>
-                Initialize event
-            </Button>
-            {/*<img src={card100} alt="Title screen" />*/}
-            <p>The card chosen: {chosenCard}</p>
-
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header className="text-white bg-dark">
-                    <Modal.Title>CHOOSE RESERVE CARD</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Container>
-                        <Row>
-                            <Col>
-                                <Button variant="secondary" style={buttonStyle} onClick={() =>selectReserve(100)}>
-                                    <img src={card100} alt="card100" />
-                                </Button>
-                            </Col>
-                            <Col>
-                                <Button variant="secondary" style={buttonStyle} onClick={() =>selectReserve(200)}>
-                                    <img src={card200} alt="card200" />
-                                </Button>
-                            </Col>
-                            <Col>
-                                <Button variant="secondary" style={buttonStyle} onClick={() =>selectReserve(300)}>
-                                    <img src={card300} alt="card300" />
-                                </Button>
-                            </Col>
-                        </Row>
-                    </Container>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="primary" onClick={handleClose}>
-                        Confirm!
-                    </Button>
-                </Modal.Footer>
-            </Modal>
-        </>
+        <Modal >
+            <Modal.Header>
+                <Modal.Title>CHOOSE RESERVE CARD</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <Container>
+                    <Row>
+                        <Col>
+                            <Button variant="secondary" className="button-style" onClick={() => props.onConfirm(100)}>
+                                <img src="/Reserve-100.svg" />
+                            </Button>
+                        </Col>
+                        <Col>
+                            <Button variant="secondary" className="button-style" onClick={() => props.onConfirm(200)}>
+                                <img src="/Reserve-200.svg" />
+                            </Button>
+                        </Col>
+                        <Col>
+                            <Button variant="secondary" className="button-style" onClick={() => props.onConfirm(300)}>
+                                <img src="/Reserve-300.svg" />
+                            </Button>
+                        </Col>
+                    </Row>
+                </Container>
+            </Modal.Body>
+        </Modal>
     );
 }
+
+ChooseReserveCard.propTypes = {
+    onConfirm: PropTypes.func.isRequired,
+};
 
 export default ChooseReserveCard;
