@@ -1,5 +1,4 @@
 #select-order-modal{
-    font-family: 'VTCSuperMarketSaleRegular';
     letter-spacing: 2px;
 }
 
@@ -70,14 +69,4 @@
 .select-order-empty button{
     font-size: 1em;
     color: #1a1311;
-}
-
-@font-face {
-    font-family: 'VTCSuperMarketSaleRegular';
-    src: url('../fonts/VTCSuperMarketSaleRegular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'AveriaSerifLibre';
-    src: url('../fonts/AveriaSerifLibre-Regular.ttf') format('truetype');
 }

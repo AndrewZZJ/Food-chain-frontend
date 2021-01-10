@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'VTCSuperMarketSale';
-    src: url('/VTCSuperMarketSaleRegular.ttf') format('truetype');
+    src: url('//VTCSuperMarketSaleRegular.ttf') format('truetype');
 }
 @font-face {
     font-family: 'AveriaSerifLibre';
-    src: url('/AveriaSerifLibre-Regular.ttf') format('truetype');
+    src: url('//AveriaSerifLibre-Regular.ttf') format('truetype');
 }
