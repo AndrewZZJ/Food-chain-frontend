@@ -1,44 +1,28 @@
-.App {
-  text-align: left;
-  letter-spacing: 1px;
+#show-chosen-reserve{
+  width: max-content;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#show-chosen-reserve .modal-content{
+  width: 60vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#show-chosen-reserve .modal-footer{
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#show-chosen-reserve .modal-body .row{
+  padding: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#show-chosen-reserve .modal-body .col{
+  padding: 5px;
 }
 
-@font-face {
-  font-family: 'VTC';
-  src: local('VTC'), url(./fonts/VTCSuperMarketSaleRegular.ttf) format('truetype');
+.reserve-card{
+  width: 100%;
+}
+
+.reserve-card svg{
+  width: 100%;
+  height: 30vh;
 }
