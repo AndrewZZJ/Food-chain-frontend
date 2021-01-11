@@ -14,7 +14,12 @@ module.exports = env => ({
         rules: [
             {
                 test: /\.css$/,
-                use: ["style-loader", "css-loader"],
+                use: ["style-loader", {
+                    loader: "css-loader",
+                    options: {
+                        url: false,
+                    },
+                }],
             },
             {
                 test: /\.js$/,
