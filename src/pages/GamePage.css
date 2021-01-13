@@ -3,6 +3,10 @@
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  font-family: "VTCSuperMarketSale";
   letter-spacing: 2px;
+}
+
+#game-page-row{
+  flex-grow: 1;
+  margin: 0;
 }
