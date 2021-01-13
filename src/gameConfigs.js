@@ -1,7 +1,7 @@
 export const employees = {
     E01: {
         title: "Waitress",
-        image: "/img/employee/01.svg",
+        image: "/employee/01.svg",
         begin: true,
         limited: false,
         salary: false,
@@ -11,7 +11,7 @@ export const employees = {
     },
     E02: {
         title: "Management Trainee",
-        image: "/img/employee/02.svg",
+        image: "/employee/02.svg",
         promotion: ["E09", "E10", "E11"],
         begin: true,
         limited: false,
@@ -22,7 +22,7 @@ export const employees = {
     },
     E03: {
         title: "Pricing Manager",
-        image: "/img/employee/03.svg",
+        image: "/employee/03.svg",
         begin: true,
         limited: false,
         salary: false,
@@ -32,7 +32,7 @@ export const employees = {
     },
     E04: {
         title: "Recruiting Girl",
-        image: "/img/employee/04.svg",
+        image: "/employee/04.svg",
         begin: true,
         limited: false,
         salary: false,
@@ -42,7 +42,7 @@ export const employees = {
     },
     E05: {
         title: "Trainer",
-        image: "/img/employee/05.svg",
+        image: "/employee/05.svg",
         begin: true,
         limited: false,
         salary: false,
@@ -52,7 +52,7 @@ export const employees = {
     },
     E06: {
         title: "Errand Boy",
-        image: "/img/employee/06.svg",
+        image: "/employee/06.svg",
         promotion: ["E12"],
         begin: true,
         limited: false,
@@ -63,7 +63,7 @@ export const employees = {
     },
     E07: {
         title: "Marketing Trainee",
-        image: "/img/employee/07.svg",
+        image: "/employee/07.svg",
         promotion: ["E13"],
         begin: true,
         limited: false,
@@ -76,7 +76,7 @@ export const employees = {
     },
     E08: {
         title: "Kitchen Trainee",
-        image: "/img/employee/08.svg",
+        image: "/employee/08.svg",
         promotion: ["E14", "E15"],
         begin: true,
         limited: false,
@@ -87,7 +87,7 @@ export const employees = {
     },
     E09: {
         title: "New Business Developer",
-        image: "/img/employee/09.svg",
+        image: "/employee/09.svg",
         begin: false,
         limited: false,
         salary: true,
@@ -97,7 +97,7 @@ export const employees = {
     },
     E10: {
         title: "Junior Vice President",
-        image: "/img/employee/10.svg",
+        image: "/employee/10.svg",
         promotion: ["E16", "E17", "E18", "E19", "E20"],
         begin: false,
         limited: false,
@@ -108,7 +108,7 @@ export const employees = {
     },
     E11: {
         title: "Luxuries Manager",
-        image: "/img/employee/11.svg",
+        image: "/employee/11.svg",
         begin: false,
         limited: true,
         salary: true,
@@ -118,7 +118,7 @@ export const employees = {
     },
     E12: {
         title: "Cart Operator",
-        image: "/img/employee/12.svg",
+        image: "/employee/12.svg",
         promotion: ["E21"],
         begin: false,
         limited: false,
@@ -131,7 +131,7 @@ export const employees = {
     },
     E13: {
         title: "Campaign Manager",
-        image: "/img/employee/13.svg",
+        image: "/employee/13.svg",
         promotion: ["E22"],
         begin: false,
         limited: false,
@@ -144,7 +144,7 @@ export const employees = {
     },
     E14: {
         title: "Burger Cook",
-        image: "/img/employee/14.svg",
+        image: "/employee/14.svg",
         promotion: ["E23"],
         begin: false,
         limited: false,
@@ -155,7 +155,7 @@ export const employees = {
     },
     E15: {
         title: "Pizza Cook",
-        image: "/img/employee/15.svg",
+        image: "/employee/15.svg",
         promotion: ["E24"],
         begin: false,
         limited: false,
@@ -166,7 +166,7 @@ export const employees = {
     },
     E16: {
         title: "Local Manager",
-        image: "/img/employee/16.svg",
+        image: "/employee/16.svg",
         begin: false,
         limited: false,
         salary: true,
@@ -178,7 +178,7 @@ export const employees = {
     },
     E17: {
         title: "Vice President",
-        image: "/img/employee/17.svg",
+        image: "/employee/17.svg",
         promotion: ["E25", "E26", "E27"],
         begin: false,
         limited: false,
@@ -189,7 +189,7 @@ export const employees = {
     },
     E18: {
         title: "Discount Manager",
-        image: "/img/employee/18.svg",
+        image: "/employee/18.svg",
         begin: false,
         limited: false,
         salary: true,
@@ -199,7 +199,7 @@ export const employees = {
     },
     E19: {
         title: "Recruiting Manager",
-        image: "/img/employee/19.svg",
+        image: "/employee/19.svg",
         begin: false,
         limited: false,
         salary: true,
@@ -210,7 +210,7 @@ export const employees = {
     },
     E20: {
         title: "Coach",
-        image: "/img/employee/20.svg",
+        image: "/employee/20.svg",
         begin: false,
         limited: false,
         salary: true,
@@ -220,7 +220,7 @@ export const employees = {
     },
     E21: {
         title: "Truck Driver",
-        image: "/img/employee/21.svg",
+        image: "/employee/21.svg",
         promotion: ["E28"],
         begin: false,
         limited: false,
@@ -233,7 +233,7 @@ export const employees = {
     },
     E22: {
         title: "Brand  Manager",
-        image: "/img/employee/22.svg",
+        image: "/employee/22.svg",
         promotion: ["E29"],
         begin: false,
         limited: false,
@@ -246,7 +246,7 @@ export const employees = {
     },
     E23: {
         title: "Burger Chef",
-        image: "/img/employee/23.svg",
+        image: "/employee/23.svg",
         begin: false,
         limited: true,
         salary: true,
@@ -256,7 +256,7 @@ export const employees = {
     },
     E24: {
         title: "Pizza Chef",
-        image: "/img/employee/24.svg",
+        image: "/employee/24.svg",
         begin: false,
         limited: true,
         salary: true,
@@ -266,7 +266,7 @@ export const employees = {
     },
     E25: {
         title: "Regional Manager",
-        image: "/img/employee/25.svg",
+        image: "/employee/25.svg",
         begin: false,
         limited: true,
         salary: true,
@@ -278,7 +278,7 @@ export const employees = {
     },
     E26: {
         title: "Senior Vice President",
-        image: "/img/employee/26.svg",
+        image: "/employee/26.svg",
         promotion: ["E30", "E31", "E32"],
         begin: false,
         limited: false,
@@ -289,7 +289,7 @@ export const employees = {
     },
     E27: {
         title: "Guru",
-        image: "/img/employee/27.svg",
+        image: "/employee/27.svg",
         begin: true,
         limited: false,
         salary: true,
@@ -299,7 +299,7 @@ export const employees = {
     },
     E28: {
         title: "Zeppelin Pilot",
-        image: "/img/employee/28.svg",
+        image: "/employee/28.svg",
         begin: false,
         limited: true,
         salary: true,
@@ -311,7 +311,7 @@ export const employees = {
     },
     E29: {
         title: "Brand Director",
-        image: "/img/employee/29.svg",
+        image: "/employee/29.svg",
         begin: false,
         limited: true,
         salary: true,
@@ -323,7 +323,7 @@ export const employees = {
     },
     E30: {
         title: "CFO",
-        image: "/img/employee/30.svg",
+        image: "/employee/30.svg",
         begin: false,
         limited: true,
         salary: true,
@@ -333,7 +333,7 @@ export const employees = {
     },
     E31: {
         title: "Executive Vice President",
-        image: "/img/employee/31.svg",
+        image: "/employee/31.svg",
         begin: false,
         limited: true,
         salary: true,
@@ -343,7 +343,7 @@ export const employees = {
     },
     E32: {
         title: "HR Director",
-        image: "/img/employee/32.svg",
+        image: "/employee/32.svg",
         begin: false,
         limited: true,
         salary: true,
@@ -362,11 +362,11 @@ export const mapTiles = {
                 positions: [[0, 3], [0, 4], [1, 3], [1, 4]],
             },
         ],
-        image: "img/map/Tile-1.svg",
+        image: "/map/Tile-1.svg",
         roads: [[2, 0], [2, 1], [0, 2], [1, 2], [2, 2], [3, 2], [4, 2], [2, 3], [2, 4]],
     },
     M02: {
-        image: "img/map/Tile-2.svg",
+        image: "/map/Tile-2.svg",
         roads: [[2, 0], [2, 1], [0, 2], [1, 2], [2, 2], [3, 2], [4, 2], [2, 3], [2, 4]],
         houseTiles: [
             {
@@ -382,14 +382,14 @@ export const mapTiles = {
                 positions: [[1, 2], [1, 3], [2, 2], [2, 3]],
             },
         ],
-        image: "img/map/Tile-3.svg",
+        image: "/map/Tile-3.svg",
         roads: [
             [0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [0, 1], [4, 1], [0, 2],
             [4, 2], [0, 3], [4, 3], [0, 4], [1, 4], [2, 4], [3, 4], [4, 4],
         ],
     },
     M04: {
-        image: "img/map/Tile-4.svg",
+        image: "/map/Tile-4.svg",
         roads: [[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [0, 1], [4, 1], [0, 2], [4, 2]],
         houseTiles: [
             {
@@ -399,7 +399,7 @@ export const mapTiles = {
         ],
     },
     M05: {
-        image: "img/map/Tile-5.svg",
+        image: "/map/Tile-5.svg",
         roads: [[0, 0], [1, 0], [2, 0], [0, 1], [0, 2], [4, 2], [4, 3], [4, 4]],
         houseTiles: [
             {
@@ -412,7 +412,7 @@ export const mapTiles = {
         ],
     },
     M06: {
-        image: "img/map/Tile-6.svg",
+        image: "/map/Tile-6.svg",
         roads: [[2, 0], [2, 1], [0, 2], [1, 2], [2, 2], [3, 2], [4, 2]],
         houseTiles: [
             {
@@ -422,7 +422,7 @@ export const mapTiles = {
         ],
     },
     M07: {
-        image: "img/map/Tile-7.svg",
+        image: "/map/Tile-7.svg",
         roads: [[2, 0], [2, 1], [2, 2], [2, 3], [2, 4]],
         crossing: [[0, 2], [1, 2], [2, 2], [3, 2], [4, 2]],
         houseTiles: [
@@ -433,7 +433,7 @@ export const mapTiles = {
         ],
     },
     M08: {
-        image: "img/map/Tile-8.svg",
+        image: "/map/Tile-8.svg",
         roads: [[2, 0], [2, 1], [0, 2], [1, 2], [2, 2], [3, 2], [4, 2]],
         houseTiles: [
             {
@@ -443,7 +443,7 @@ export const mapTiles = {
         ],
     },
     M09: {
-        image: "img/map/Tile-9.svg",
+        image: "/map/Tile-9.svg",
         roads: [[2, 0], [2, 1], [0, 2], [1, 2], [2, 2], [3, 2], [4, 2]],
         houseTiles: [
             {
@@ -453,7 +453,7 @@ export const mapTiles = {
         ],
     },
     M10: {
-        image: "img/map/Tile-10.svg",
+        image: "/map/Tile-10.svg",
         roads: [[2, 0], [3, 0], [4, 0], [4, 1], [0, 2], [4, 2], [0, 3], [0, 4], [1, 4], [2, 4]],
         houseTiles: [
             {
@@ -463,7 +463,7 @@ export const mapTiles = {
         ],
     },
     M11: {
-        image: "img/map/Tile-11.svg",
+        image: "/map/Tile-11.svg",
         roads: [[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [0, 1], [4, 1], [0, 2], [4, 2]],
         houseTiles: [
             {
@@ -473,14 +473,14 @@ export const mapTiles = {
         ],
     },
     M12: {
-        image: "img/map/Tile-12.svg",
+        image: "/map/Tile-12.svg",
         roads: [[2, 0], [2, 1], [0, 2], [1, 2], [2, 2], [3, 2], [4, 2]],
         drinks: [
             { type: "lemonade", position: [3, 3] },
         ],
     },
     M13: {
-        image: "img/map/Tile-13.svg",
+        image: "/map/Tile-13.svg",
         roads: [[2, 0], [3, 0], [4, 0], [4, 1], [0, 2], [4, 2], [0, 3], [0, 4], [1, 4], [2, 4]],
         drinks: [
             { type: "lemonade", position: [3, 1] },
@@ -488,7 +488,7 @@ export const mapTiles = {
         ],
     },
     M14: {
-        image: "img/map/Tile-14.svg",
+        image: "/map/Tile-14.svg",
         roads: [[2, 0], [2, 1], [0, 2], [1, 2], [2, 2], [3, 2], [4, 2]],
         drinks: [
             { type: "beer", position: [1, 1] },
@@ -496,14 +496,14 @@ export const mapTiles = {
 
     },
     M15: {
-        image: "img/map/Tile-15.svg",
+        image: "/map/Tile-15.svg",
         roads: [[2, 0], [2, 1], [0, 2], [1, 2], [2, 2], [3, 2], [4, 2], [2, 3], [2, 4]],
         drinks: [
             { type: "beer", position: [1, 0] },
         ],
     },
     M16: {
-        image: "img/map/Tile-16.svg",
+        image: "/map/Tile-16.svg",
         roads: [[2, 0], [2, 1], [2, 2], [2, 3], [2, 4]],
         crossing: [[0, 2], [1, 2], [2, 2], [3, 2], [4, 2]],
         drinks: [
@@ -512,21 +512,21 @@ export const mapTiles = {
         ],
     },
     M17: {
-        image: "img/map/Tile-17.svg",
+        image: "/map/Tile-17.svg",
         roads: [[2, 0], [2, 1], [0, 2], [1, 2], [2, 2], [3, 2], [4, 2]],
         drinks: [
             { type: "coke", position: [1, 3] },
         ],
     },
     M18: {
-        image: "img/map/Tile-18.svg",
+        image: "/map/Tile-18.svg",
         roads: [[2, 0], [2, 1], [0, 2], [1, 2], [2, 2], [3, 2], [4, 2], [2, 3], [2, 4]],
         drinks: [
             { type: "coke", position: [1, 1] },
         ],
     },
     M19: {
-        image: "img/map/Tile-19.svg",
+        image: "/map/Tile-19.svg",
         roads: [[2, 0], [2, 1], [0, 2], [1, 2], [2, 2], [3, 2], [4, 2], [2, 3], [2, 4]],
         drinks: [
             { type: "coke", position: [3, 0] },
@@ -534,7 +534,7 @@ export const mapTiles = {
         ],
     },
     M20: {
-        image: "img/map/Tile-20.svg",
+        image: "/map/Tile-20.svg",
         roads: [[2, 0], [2, 1], [0, 2], [1, 2], [2, 2], [3, 2], [4, 2], [2, 3], [2, 4]],
         drinks: [
             { type: "lemonade", position: [1, 1] },
@@ -565,92 +565,92 @@ export const houseTiles = {
 
 export const milestones = {
     Mi01: {
-        image: "img/milestone/Milestone-1.svg",
+        image: "/milestone/Milestone-1.svg",
         title: "First burger marketed",
         description: "+$5 for every burger sold",
     },
     Mi02: {
-        image: "img/milestone/Milestone-2.svg",
+        image: "/milestone/Milestone-2.svg",
         title: "First to have $20",
         description: "May see bank reserve cards",
     },
     Mi03: {
-        image: "img/milestone/Milestone-3.svg",
+        image: "/milestone/Milestone-3.svg",
         title: "First to lower prices",
         description: "Price -$1",
     },
     Mi04: {
-        image: "img/milestone/Milestone-4.svg",
+        image: "/milestone/Milestone-4.svg",
         title: "First to train someone",
         description: "$15 discount on salaries",
     },
     Mi05: {
-        image: "img/milestone/Milestone-5.svg",
+        image: "/milestone/Milestone-5.svg",
         title: "First to pay $20 or more in salaries",
         description: "May use multiple trainers on the same person",
     },
     Mi06: {
-        image: "img/milestone/Milestone-6.svg",
+        image: "/milestone/Milestone-6.svg",
         title: "First pizza produced",
         description: "+1 pizza cook",
     },
     Mi07: {
-        image: "img/milestone/Milestone-7.svg",
+        image: "/milestone/Milestone-7.svg",
         title: "First burger produced",
         description: "+1 burger cook",
     },
     Mi08: {
-        image: "img/milestone/Milestone-8.svg",
+        image: "/milestone/Milestone-8.svg",
         title: "First cart operator played",
         description: "Buyers get range +1",
     },
     Mi09: {
-        image: "img/milestone/Milestone-9.svg",
+        image: "/milestone/Milestone-9.svg",
         title: "First to have $100",
         description: "Your CEO counts as CFO\n(+50% cash). May not have CFO",
     },
     Mi10: {
-        image: "img/milestone/Milestone-10.svg",
+        image: "/milestone/Milestone-10.svg",
         title: "First errand boy played",
         description: "All buyers get + 1\ndrink from each source",
     },
     Mi11: {
-        image: "img/milestone/Milestone-11.svg",
+        image: "/milestone/Milestone-11.svg",
         title: "First billboard placed",
         description: "No salaries for marketeers;\nEternal marketing",
     },
     Mi12: {
-        image: "img/milestone/Milestone-12.svg",
+        image: "/milestone/Milestone-12.svg",
         title: "First pizza marketed",
         description: "+$5 for every pizza sold",
     },
     Mi13: {
-        image: "img/milestone/Milestone-13.svg",
+        image: "/milestone/Milestone-13.svg",
         title: "First drink marketed",
         description: "+$5 for every drink sold",
     },
     Mi14: {
-        image: "img/milestone/Milestone-14.svg",
+        image: "/milestone/Milestone-14.svg",
         title: "First airplane campaign",
         description: "Count +2 open slots when\ndetermining order of play",
     },
     Mi15: {
-        image: "img/milestone/Milestone-15.svg",
+        image: "/milestone/Milestone-15.svg",
         title: "First radio campaign",
         description: "Your radios market 2 goods per turn instead of 1",
     },
     Mi16: {
-        image: "img/milestone/Milestone-16.svg",
+        image: "/milestone/Milestone-16.svg",
         title: "First to hire 3 people in 1 turn",
         description: "+2 Management Trainees",
     },
     Mi17: {
-        image: "img/milestone/Milestone-17.svg",
+        image: "/milestone/Milestone-17.svg",
         title: "First to throw away drink or food",
         description: "Get a freezer that\nstores 10 items(drink/food)",
     },
     Mi18: {
-        image: "img/milestone/Milestone-18.svg",
+        image: "/milestone/Milestone-18.svg",
         title: "First waitress played",
         description: "Each waitress +$2",
     },
@@ -660,97 +660,97 @@ export const marketingTiles = {
     Mk01: {
         type: "radio",
         size: [1, 1],
-        image: "img/marketing/Marketing_Tile-1.svg",
+        image: "/marketing/Marketing_Tile-1.svg",
         order: 1,
     },
     Mk02: {
         type: "radio",
         size: [1, 1],
-        image: "img/marketing/Marketing_Tile-2.svg",
+        image: "/marketing/Marketing_Tile-2.svg",
         order: 2,
     },
     Mk03: {
         type: "radio",
         size: [1, 1],
-        image: "img/marketing/Marketing_Tile-3.svg",
+        image: "/marketing/Marketing_Tile-3.svg",
         order: 3,
     },
     Mk04: {
         type: "airplane",
         size: [1, 2],
-        image: "img/marketing/Marketing_Tile-4.svg",
+        image: "/marketing/Marketing_Tile-4.svg",
         order: 4,
     },
     Mk05: {
         type: "airplane",
         size: [3, 2],
-        image: "img/marketing/Marketing_Tile-5.svg",
+        image: "/marketing/Marketing_Tile-5.svg",
         order: 5,
     },
     Mk06: {
         type: "airplane",
         size: [5, 2],
-        image: "img/marketing/Marketing_Tile-16.svg",
+        image: "/marketing/Marketing_Tile-16.svg",
         order: 6,
     },
     Mk07: {
         type: "mailbox",
         size: [2, 2],
-        image: "img/marketing/Marketing_Tile-8.svg",
+        image: "/marketing/Marketing_Tile-8.svg",
         order: 7,
     },
     Mk08: {
         type: "mailbox",
         size: [2, 2],
-        image: "img/marketing/Marketing_Tile-9.svg",
+        image: "/marketing/Marketing_Tile-9.svg",
         order: 8,
     },
     Mk09: {
         type: "mailbox",
         size: [1, 1],
-        image: "img/marketing/Marketing_Tile-6.svg",
+        image: "/marketing/Marketing_Tile-6.svg",
         order: 9,
     },
     Mk10: {
         type: "mailbox",
         size: [1, 1],
-        image: "img/marketing/Marketing_Tile-7.svg",
+        image: "/marketing/Marketing_Tile-7.svg",
         order: 10,
     },
     Mk11: {
         type: "billboard",
         size: [3, 2],
-        image: "img/marketing/Marketing_Tile-12.svg",
+        image: "/marketing/Marketing_Tile-12.svg",
         order: 11,
     },
     Mk12: {
         type: "billboard",
         size: [2, 2],
-        image: "img/marketing/Marketing_Tile-13.svg",
+        image: "/marketing/Marketing_Tile-13.svg",
         order: 12,
     },
     Mk13: {
         type: "billboard",
         size: [1, 3],
-        image: "img/marketing/Marketing_Tile-11.svg",
+        image: "/marketing/Marketing_Tile-11.svg",
         order: 13,
     },
     Mk14: {
         type: "billboard",
         size: [2, 1],
-        image: "img/marketing/Marketing_Tile-10.svg",
+        image: "/marketing/Marketing_Tile-10.svg",
         order: 14,
     },
     Mk15: {
         type: "billboard",
         size: [1, 1],
-        image: "img/marketing/Marketing_Tile-14.svg",
+        image: "/marketing/Marketing_Tile-14.svg",
         order: 15,
     },
     Mk16: {
         type: "billboard",
         size: [1, 1],
-        image: "img/marketing/Marketing_Tile-15.svg",
+        image: "/marketing/Marketing_Tile-15.svg",
         order: 16,
     },
 
