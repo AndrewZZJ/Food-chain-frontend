@@ -5,6 +5,7 @@ import { createBrowserHistory } from "history";
 import userReducer from "./reducers/user";
 import socketReducer from "./reducers/socket";
 import gameReducer from "./reducers/game";
+import mapReducer from "./reducers/map";
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -22,6 +23,7 @@ export default createStore(
         user: userReducer,
         socket: socketReducer,
         game: gameReducer,
+        map: mapReducer,
     }),
     composeEnhancer(
         applyMiddleware(
