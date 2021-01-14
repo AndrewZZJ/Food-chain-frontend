@@ -8,8 +8,8 @@ function MapTile(props) {
     return (
         <URLImage
             src={mapTiles[props.id].image}
-            x={props.offset.x + props.position.xTile * props.size.width}
-            y={props.offset.y + props.position.yTile * props.size.height}
+            x={props.offset.x + props.position.xTile * props.size.width + props.size.width / 2}
+            y={props.offset.y + props.position.yTile * props.size.height + props.size.height / 2}
             width={props.size.width}
             height={props.size.height}
             rotation={props.rotate * 90}

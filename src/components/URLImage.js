@@ -8,6 +8,7 @@ function URLImage(props){
 
     return (
         <Image
+            {...props.localProps}
             image={image}
             x={props.x}
             y={props.y}
@@ -27,6 +28,13 @@ URLImage.propTypes = {
     rotation: PropTypes.number,
     x: PropTypes.number,
     y: PropTypes.number,
+    localProps: PropTypes.object,
+};
+
+URLImage.defaultProps = {
+    rotation: 0,
+    x: 0,
+    y: 0,
 };
 
 export default URLImage;

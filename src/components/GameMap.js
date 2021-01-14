@@ -6,15 +6,12 @@ import {Stage, Layer} from "react-konva";
 
 import "./GameMap.css";
 import MapTile from "./MapTile";
+import House from "./House";
 import {mapEvent} from "../reducers/map";
 
 function GameMap(props){
     const colRef = useRef(null);
     const [size, setSize] = useState({width: 0, height:0});
-    const [tileOffset, setTileOffset] = useState({
-        x: 0,
-        y: 0
-    });
     useEffect(() => {
         function onResize(){
             setSize({
@@ -37,10 +34,6 @@ function GameMap(props){
                         y: (colRef.current.offsetHeight / 2) - (tileSize * ySize / 2),
                     }
                 });
-                setTileOffset({
-                    x: tileSize / 2,
-                    y: (colRef.current.offsetHeight / 2) - (tileSize * ySize / 2) + tileSize / 2,
-                });
             }else{
                 const tileSize = colRef.current.offsetHeight / ySize;
                 props.updateSizeInfo({
@@ -53,10 +46,6 @@ function GameMap(props){
                         x: (colRef.current.offsetWidth / 2) - (tileSize * xSize / 2),
                         y: 0,
                     }
-                });
-                setTileOffset({
-                    x: (colRef.current.offsetWidth / 2) - (tileSize * xSize / 2) + tileSize / 2,
-                    y: tileSize / 2,
                 });
             }
         }
@@ -114,8 +103,18 @@ function GameMap(props){
                                 width: props.sizeInfo.tileSize,
                                 height: props.sizeInfo.tileSize,
                             }}
-                            offset={tileOffset}
+                            offset={props.sizeInfo.offset}
                             rotate={tile.direction}
+                        />
+                    ))}
+                </Layer>
+                <Layer>
+                    {Object.entries(props.houses).map(([key, house]) => (
+                        <House
+                            key={key}
+                            house={house}
+                            unitSize={props.sizeInfo.tileSize / 5}
+                            offset={props.sizeInfo.offset}
                         />
                     ))}
                 </Layer>
@@ -148,11 +147,13 @@ GameMap.propTypes = {
     mouseMove: PropTypes.func,
     mouseClick: PropTypes.func,
     updateSizeInfo: PropTypes.func,
+    houses: PropTypes.object,
 };
 
 const mapStateToProps = state => ({
-    mapTiles: state.map.mapTiles,
     players: state.game.players,
+    mapTiles: state.map.mapTiles,
+    houses: state.map.houses,
     sizeInfo: state.map.sizeInfo,
 });
 

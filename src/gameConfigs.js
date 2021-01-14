@@ -557,10 +557,11 @@ export const houseTiles = {
     H12: { fixed: true, garden: false, order: 12 },
     H13: { fixed: true, garden: false, order: 13 },
     H14: { fixed: false, garden: true, order: 14 },
-    H16: { fixed: true, garden: false, order: 15 },
-    H17: { fixed: false, garden: true, order: 16 },
-    H18: { fixed: true, garden: false, order: 17 },
-    H19: { fixed: false, garden: true, order: 18 },
+    H15: { fixed: true, garden: false, order: 15 },
+    H16: { fixed: true, garden: false, order: 16 },
+    H17: { fixed: false, garden: true, order: 17 },
+    H18: { fixed: true, garden: false, order: 18 },
+    H19: { fixed: false, garden: true, order: 19 },
 };
 
 export const milestones = {

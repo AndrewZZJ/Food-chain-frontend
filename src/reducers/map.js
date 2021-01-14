@@ -1,4 +1,7 @@
-import {mapTiles as ConfigTiles}  from "../gameConfigs";
+import {
+    mapTiles as ConfigTiles,
+    houseTiles as ConfigHouses,
+}  from "../gameConfigs";
 
 const initialState = {
     mapTiles: [
@@ -89,7 +92,56 @@ const initialState = {
         },
     },
     arrayMap: null,
-    houses: {},
+    houses: {
+        H1: {
+            fixed: false,
+            garden: true,
+            order: 1,
+            position: [5, 3],
+            direction: 0,
+            demands: ["pizza"],
+        },
+        H2: {
+            fixed: false,
+            garden: true,
+            order: 2,
+            position: [1, 3],
+            direction: 2,
+            demands: ["burger", "beer"],
+        },
+        H3: {
+            fixed: false,
+            garden: true,
+            order: 3,
+            position: [11, 3],
+            direction: 1,
+            demands: ["beer", "beer", "beer"],
+        },
+        H4: {
+            fixed: false,
+            garden: true,
+            order: 10,
+            position: [3, 9],
+            direction: 3,
+            demands: ["coke", "lemonade", "beer", "beer", "beer"],
+        },
+        H5: {
+            fixed: true,
+            garden: true,
+            order: 16,
+            position: [1, 6],
+            direction: 0,
+            demands: ["coke", "lemonade", "beer", "beer", "burger"],
+        },
+        H6: {
+            fixed: true,
+            garden: true,
+            order: 8,
+            position: [6, 12],
+            direction: 3,
+            demands: ["coke", "lemonade", "beer", "beer", "burger"],
+        },
+    },
 };
 
 export default (state = initialState, action) => {
@@ -97,8 +149,9 @@ export default (state = initialState, action) => {
     case "socket/update/setup_map":
         return {
             ...state,
-            mapTiles: state.mapTiles.concat(state.mapTiles, action.payload.tiles),
+            mapTiles: action.payload.tiles,
             arrayMap: setupArrayMap(action.payload.tiles),
+            houses: setupHouses(action.payload.tiles),
         };
     case "game/map/mouse_move":
         return {
@@ -193,13 +246,30 @@ function setupArrayMap(mapTiles){
             });
         }
     });
-    
-    for(let y = 0; y < ySize * 5; ++y){
-        let out = "";
-        for(let x = 0; x < xSize * 5; ++x){
-            out += `${arrayMap[x][y]}\t`;
-        }
-        console.log(out);
-    }
     return arrayMap;
+}
+
+function setupHouses(mapTiles){
+    let houses = {};
+    mapTiles.forEach(tile => {
+        const tileConf = ConfigTiles[tile.tileId];
+        if(tileConf.houseTiles){
+            tileConf.houseTiles.forEach(houseTile => {
+                const houseConf = ConfigHouses[houseTile.tileId];
+                houses[houseTile.tileId] = {
+                    ...houseConf,
+                    demands: [],
+                    position: getXYFromTile(
+                        tile.position.xTile,
+                        tile.position.yTile,
+                        tileConf.houseTiles.positions[0][0],
+                        tileConf.houseTiles.positions[0][1],
+                        tile.direction
+                    ),
+                    direction: tile.direction,
+                };
+            });
+        }
+    });
+    return houses;
 }
