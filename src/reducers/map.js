@@ -142,6 +142,12 @@ const initialState = {
             demands: ["coke", "lemonade", "beer", "beer", "burger"],
         },
     },
+    gardens: [
+        {x: 1, y: 8, direction: 0},
+        {x: 13, y: 11, direction: 1},
+        {x: 11, y: 13, direction: 2},
+        {x: 8, y: 12, direction: 3},
+    ]
 };
 
 export default (state = initialState, action) => {

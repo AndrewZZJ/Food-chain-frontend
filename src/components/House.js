@@ -5,26 +5,26 @@ import {Group, Text} from "react-konva";
 
 function House(props) {
     let [xTile, yTile] = props.house.position;
-    let rotWidth = 2 * props.unitSize;
-    let rotHeight = 3 * props.unitSize;
     switch(props.house.direction){
+    case 0:
+        xTile += 1;
+        yTile += 1.5;
+        break;
     case 1:
-        xTile -= 2;
-        [rotWidth, rotHeight] = [rotHeight, rotWidth];
+        xTile -= 0.5;
+        yTile += 1;
         break;
     case 2:
-        xTile -= 1;
-        yTile -= 2;
+        yTile -= 0.5;
         break;
     case 3:
-        yTile -= 1;
-        [rotWidth, rotHeight] = [rotHeight, rotWidth];
+        xTile += 1.5;
         break;
     }
     return (
         <Group
-            x={props.offset.x + xTile * props.unitSize + rotWidth / 2}
-            y={props.offset.y + yTile * props.unitSize + rotHeight / 2}
+            x={props.offset.x + xTile * props.unitSize}
+            y={props.offset.y + yTile * props.unitSize}
             rotation={props.house.direction * 90}
         >
             {(props.house.fixed ? null : 
@@ -99,10 +99,6 @@ House.propTypes = {
         direction: PropTypes.number.isRequired,
         demands: PropTypes.arrayOf(PropTypes.string),
     }),
-};
-
-House.defaultProps = {
-    rotate: 0,
 };
 
 export default House;

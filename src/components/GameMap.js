@@ -7,6 +7,7 @@ import {Stage, Layer} from "react-konva";
 import "./GameMap.css";
 import MapTile from "./MapTile";
 import House from "./House";
+import Garden from "./Garden";
 import {mapEvent} from "../reducers/map";
 
 function GameMap(props){
@@ -109,6 +110,17 @@ function GameMap(props){
                     ))}
                 </Layer>
                 <Layer>
+                    {props.gardens.map((garden, index) => (
+                        <Garden
+                            key={index}
+                            position={{x: garden.x, y:garden.y}}
+                            unitSize={props.sizeInfo.tileSize / 5}
+                            offset={props.sizeInfo.offset}
+                            rotate={garden.direction}
+                        />
+                    ))}
+                </Layer>
+                <Layer>
                     {Object.entries(props.houses).map(([key, house]) => (
                         <House
                             key={key}
@@ -148,6 +160,11 @@ GameMap.propTypes = {
     mouseClick: PropTypes.func,
     updateSizeInfo: PropTypes.func,
     houses: PropTypes.object,
+    gardens: PropTypes.arrayOf(PropTypes.shape({
+        x: PropTypes.number,
+        y: PropTypes.number,
+        direction: PropTypes.number,
+    })),
 };
 
 const mapStateToProps = state => ({
@@ -155,6 +172,7 @@ const mapStateToProps = state => ({
     mapTiles: state.map.mapTiles,
     houses: state.map.houses,
     sizeInfo: state.map.sizeInfo,
+    gardens: state.map.gardens,
 });
 
 const mapDispatchToProps = {

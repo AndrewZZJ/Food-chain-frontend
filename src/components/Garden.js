@@ -1,23 +1,48 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Card } from "react-bootstrap";
-
+import URLImage from "./URLImage";
 
 function Garden(props) {
+    let {x, y} = props.position;
+    switch(props.rotate){
+    case 0:
+        x += 1;
+        y += 0.5;
+        break;
+    case 1:
+        x += 0.5;
+        y += 1;
+        break;
+    case 2:
+        x += 1;
+        y += 0.5;
+        break;
+    case 3:
+        x += 0.5;
+        break;
+    }
     return (
-        <Card.Img
-            variant="top"
-            src={props.src}
-            style={{ transform: `rotate(${(props.rotate % 4) * 90}deg)` }}
-            height={props.height}
-            width={props.width}/>
+        <URLImage
+            src="/garden.svg"
+            x={props.offset.x + x * props.unitSize}
+            y={props.offset.y + y * props.unitSize}
+            width={2 * props.unitSize}
+            height={props.unitSize}
+            rotation={props.rotate * 90}
+        />
     );
 }
 
 Garden.propTypes = {
-    src: PropTypes.string.isRequired,
-    height: PropTypes.oneOf([PropTypes.number, PropTypes.string]).isRequired,
-    width: PropTypes.oneOf([PropTypes.number, PropTypes.string]).isRequired,
+    unitSize: PropTypes.number.isRequired,
+    offset: PropTypes.shape({
+        x: PropTypes.number,
+        y: PropTypes.number,
+    }),
+    position: PropTypes.shape({
+        x: PropTypes.number,
+        y: PropTypes.number,
+    }),
     rotate: PropTypes.number,
 };
 
