@@ -23,7 +23,7 @@ function GameMap(props){
             const xSize = playerCount / 2 + 2 + playerCount % 2;
             const ySize = playerCount / 2 + 2;
             if(colRef.current.offsetWidth < colRef.current.offsetHeight){
-                const tileSize = colRef.current.offsetWidth / xSize;
+                const tileSize = colRef.current.offsetWidth * 5 / (xSize * 5 + 4);
                 props.updateSizeInfo({
                     tileSize,
                     mapSize: {
@@ -31,12 +31,12 @@ function GameMap(props){
                         y: ySize,
                     },
                     offset: {
-                        x: 0,
+                        x: tileSize * 0.4,
                         y: (colRef.current.offsetHeight / 2) - (tileSize * ySize / 2),
                     }
                 });
             }else{
-                const tileSize = colRef.current.offsetHeight / ySize;
+                const tileSize = colRef.current.offsetHeight * 5 / (ySize * 5 + 4);
                 props.updateSizeInfo({
                     tileSize,
                     mapSize: {
@@ -45,7 +45,7 @@ function GameMap(props){
                     },
                     offset: {
                         x: (colRef.current.offsetWidth / 2) - (tileSize * xSize / 2),
-                        y: 0,
+                        y: tileSize * 0.4,
                     }
                 });
             }
