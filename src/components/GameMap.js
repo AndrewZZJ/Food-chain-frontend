@@ -5,10 +5,11 @@ import {Col} from "react-bootstrap";
 import {Stage, Layer} from "react-konva";
 
 import "./GameMap.css";
+import {mapEvent} from "../reducers/map";
 import MapTile from "./MapTile";
 import House from "./House";
 import Garden from "./Garden";
-import {mapEvent} from "../reducers/map";
+import MarketingTile from "./MarketingTile";
 import RestaurantTile from "./RestaurantTile";
 
 function GameMap(props){
@@ -154,6 +155,16 @@ function GameMap(props){
                         />
                     ))}
                 </Layer>
+                <Layer>
+                    {Object.entries(props.marketings).map(([key, marketing]) => (
+                        <MarketingTile
+                            key={key}
+                            marketing={marketing}
+                            unitSize={props.sizeInfo.tileSize / 5}
+                            offset={props.sizeInfo.offset}
+                        />
+                    ))}
+                </Layer>
             </Stage>
         </Col>
     );
@@ -194,6 +205,7 @@ GameMap.propTypes = {
         position: PropTypes.arrayOf(PropTypes.number),
         direction: PropTypes.number,
     })),
+    marketings: PropTypes.object,
 };
 
 const mapStateToProps = state => ({
@@ -203,6 +215,7 @@ const mapStateToProps = state => ({
     sizeInfo: state.map.sizeInfo,
     gardens: state.map.gardens,
     restaurants: state.map.restaurants,
+    marketings: state.map.marketings,
 });
 
 const mapDispatchToProps = {

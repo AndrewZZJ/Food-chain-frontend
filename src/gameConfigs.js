@@ -732,7 +732,7 @@ export const marketingTiles = {
     },
     Mk13: {
         type: "billboard",
-        size: [1, 3],
+        size: [3, 1],
         image: "/marketing/Marketing_Tile-11.svg",
         order: 13,
     },

@@ -159,7 +159,49 @@ const initialState = {
             position: [8, 5],
             direction: 1
         },
-    ]
+    ],
+    marketings:{
+        Mk01: {
+            type: "radio",
+            size: [1, 1],
+            image: "/marketing/Marketing_Tile-1.svg",
+            order: 1,
+            position: [1, 0],
+            direction: 2,
+        },
+        Mk07: {
+            type: "mailbox",
+            size: [2, 2],
+            image: "/marketing/Marketing_Tile-8.svg",
+            order: 7,
+            position: [4, 0],
+            direction: 1,
+        },
+        Mk14: {
+            type: "billboard",
+            size: [2, 1],
+            image: "/marketing/Marketing_Tile-10.svg",
+            order: 14,
+            position: [9, 0],
+            direction: 2,
+        },
+        Mk11: {
+            type: "billboard",
+            size: [3, 2],
+            image: "/marketing/Marketing_Tile-12.svg",
+            order: 11,
+            position: [10, 9],
+            direction: 2,
+        },
+        Mk13: {
+            type: "billboard",
+            size: [3, 1],
+            image: "/marketing/Marketing_Tile-11.svg",
+            order: 13,
+            position: [12, 1],
+            direction: 2,
+        },
+    }
 };
 
 export default (state = initialState, action) => {
