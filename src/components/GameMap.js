@@ -9,6 +9,7 @@ import MapTile from "./MapTile";
 import House from "./House";
 import Garden from "./Garden";
 import {mapEvent} from "../reducers/map";
+import RestaurantTile from "./RestaurantTile";
 
 function GameMap(props){
     const colRef = useRef(null);
@@ -91,6 +92,15 @@ function GameMap(props){
             colRef.current.removeEventListener("click", onMouseClick);
         };
     }, [props.sizeInfo]);
+    
+    function restaurantRotate(index){
+        console.log(`Rotate:${index}`); // TODO:
+    }
+
+    function restaurantRemove(index){
+        console.log(`Remove:${index}`); // TODO:
+    }
+
     return (
         <Col id="game-map" ref={colRef}>
             <Stage width={size.width} height={size.height}>
@@ -130,6 +140,20 @@ function GameMap(props){
                         />
                     ))}
                 </Layer>
+                <Layer>
+                    {props.restaurants.map((restaurant, index) => (
+                        <RestaurantTile
+                            key={index}
+                            player={restaurant.player}
+                            position={restaurant.position}
+                            unitSize={props.sizeInfo.tileSize / 5}
+                            offset={props.sizeInfo.offset}
+                            rotate={restaurant.direction}
+                            onRotate={restaurantRotate.bind(this, index)}
+                            onRemove={restaurantRemove.bind(this, index)}
+                        />
+                    ))}
+                </Layer>
             </Stage>
         </Col>
     );
@@ -165,6 +189,11 @@ GameMap.propTypes = {
         y: PropTypes.number,
         direction: PropTypes.number,
     })),
+    restaurants: PropTypes.arrayOf(PropTypes.shape({
+        player: PropTypes.number,
+        position: PropTypes.arrayOf(PropTypes.number),
+        direction: PropTypes.number,
+    })),
 };
 
 const mapStateToProps = state => ({
@@ -173,6 +202,7 @@ const mapStateToProps = state => ({
     houses: state.map.houses,
     sizeInfo: state.map.sizeInfo,
     gardens: state.map.gardens,
+    restaurants: state.map.restaurants,
 });
 
 const mapDispatchToProps = {
