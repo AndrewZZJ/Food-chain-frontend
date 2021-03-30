@@ -32,6 +32,10 @@ function House(props) {
                     src="/house.svg"
                     width={2 * props.unitSize}
                     height={3 * props.unitSize}
+                    localProps={{
+                        stroke: "#1A1311",
+                        strokeWidth: 2,
+                    }}
                 />
             )}
             {(props.house.fixed ? null : 

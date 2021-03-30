@@ -16,7 +16,7 @@ function RestaurantTile(props) {
                 <Rect
                     fill="#FFF5E0"
                     stroke="#1A1311"
-                    strokeWidth={1}
+                    strokeWidth={2}
                     width={2 * props.unitSize}
                     height={2 * props.unitSize}
                     x={-props.unitSize}

@@ -47,7 +47,8 @@ function MarketingTile(props) {
             y: props.offset.y + yTile * props.unitSize,
             xSize: (props.marketing.direction % 2) ? ySize : xSize,
             ySize: (props.marketing.direction % 2) ? xSize : ySize,
-            direction: popDir
+            direction: popDir,
+            restaurant: props.marketing.restaurant,
         });
     }
     function onMouseOut(){
@@ -61,12 +62,15 @@ function MarketingTile(props) {
         >
             <URLImage
                 src={props.marketing.image}
-                stroke="#1A1311"
-                strokeWidth={1}
                 width={xSize * props.unitSize}
                 height={ySize * props.unitSize}
                 rotation={props.marketing.direction * 90}
-                localProps={{onMouseOver, onMouseOut}}
+                localProps={{
+                    onMouseOver,
+                    onMouseOut,
+                    stroke: "#1A1311",
+                    strokeWidth: 2,
+                }}
             />
         </Group>
     );
@@ -85,6 +89,7 @@ MarketingTile.propTypes = {
         order: PropTypes.number.isRequired,
         position: PropTypes.arrayOf(PropTypes.number).isRequired,
         direction: PropTypes.number.isRequired,
+        restaurant: PropTypes.number.isRequired,
     }),
     setAdvertise: PropTypes.func.isRequired,
 };
