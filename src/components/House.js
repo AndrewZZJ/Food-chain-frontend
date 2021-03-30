@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import URLImage from "./URLImage";
 import {Group, Text} from "react-konva";
+import {getOptimalFoodSize} from "./util";
 
 function House(props) {
     let [xTile, yTile] = props.house.position;
@@ -53,22 +54,7 @@ function House(props) {
                 />
             )}
             {props.house.demands.map((demand, index) => {
-                let width = props.unitSize, height = props.unitSize;
-                switch(demand){
-                case "burger":
-                    height = height * 21 / 30;
-                    break;
-                case "pizza":
-                    height = height * 29/ 31;
-                    break;
-                case "coke":
-                case "beer":
-                    width = width * 13 / 34;
-                    break;
-                case "lemonade":
-                    width = width * 20 / 31;
-                    break;
-                }
+                const {width, height} = getOptimalFoodSize(demand, props.unitSize, props.unitSize);
                 return(
                     <URLImage
                         key={index}

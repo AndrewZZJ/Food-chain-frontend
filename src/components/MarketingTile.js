@@ -49,6 +49,7 @@ function MarketingTile(props) {
             ySize: (props.marketing.direction % 2) ? xSize : ySize,
             direction: popDir,
             restaurant: props.marketing.restaurant,
+            campaign: props.marketing.campaign,
         });
     }
     function onMouseOut(){
@@ -90,6 +91,7 @@ MarketingTile.propTypes = {
         position: PropTypes.arrayOf(PropTypes.number).isRequired,
         direction: PropTypes.number.isRequired,
         restaurant: PropTypes.number.isRequired,
+        campaign: PropTypes.object.isRequired,
     }),
     setAdvertise: PropTypes.func.isRequired,
 };

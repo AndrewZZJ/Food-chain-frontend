@@ -169,6 +169,9 @@ const initialState = {
             position: [1, 0],
             direction: 2,
             restaurant: 1,
+            campaign: {
+                "coke": 5
+            },
         },
         Mk07: {
             type: "mailbox",
@@ -178,6 +181,9 @@ const initialState = {
             position: [4, 0],
             direction: 1,
             restaurant: 2,
+            campaign: {
+                "lemonade": 3
+            },
         },
         Mk14: {
             type: "billboard",
@@ -187,6 +193,9 @@ const initialState = {
             position: [9, 0],
             direction: 2,
             restaurant: 1,
+            campaign: {
+                "beer": 2
+            },
         },
         Mk11: {
             type: "billboard",
@@ -196,6 +205,9 @@ const initialState = {
             position: [10, 9],
             direction: 2,
             restaurant: 3,
+            campaign: {
+                "pizza": 2
+            },
         },
         Mk13: {
             type: "billboard",
@@ -205,6 +217,9 @@ const initialState = {
             position: [12, 1],
             direction: 2,
             restaurant: 2,
+            campaign: {
+                "burger": 2
+            },
         },
         Mk06: {
             type: "airplane",
@@ -214,6 +229,9 @@ const initialState = {
             position: [0, -2],
             direction: 0,
             restaurant: 1,
+            campaign: {
+                "beer": 4
+            },
         },
         Mk04: {
             type: "airplane",
@@ -223,6 +241,9 @@ const initialState = {
             position: [9, -2],
             direction: 1,
             restaurant: 5,
+            campaign: {
+                "beer": 4
+            },
         },
         Mk05: {
             type: "airplane",
@@ -232,6 +253,9 @@ const initialState = {
             position: [15, 3],
             direction: 3,
             restaurant: 4,
+            campaign: {
+                "coke": 4
+            },
         },
         Mk55: {
             type: "airplane",
@@ -241,6 +265,9 @@ const initialState = {
             position: [-2, 3],
             direction: 3,
             restaurant: 1,
+            campaign: {
+                "beer": 4
+            },
         },
     }
 };

@@ -23,8 +23,7 @@ const RouterWithRedux = (props) => {
         <ConnectedRouter history={history}>
             <Switch>
                 <Route exact path="/game">
-                    {/*props.username ? <GamePage/> : <Redirect to="/"/>*/}
-                    <GamePage/>
+                    {props.username ? <GamePage/> : <Redirect to="/"/>}
                 </Route>
                 <Route exact path="/waiting">
                     {redirectWaitingPage(Boolean(props.username), props.isPlaying)}
