@@ -678,7 +678,7 @@ export const marketingTiles = {
     },
     Mk04: {
         type: "airplane",
-        size: [1, 2],
+        size: [2, 1],
         image: "/marketing/Marketing_Tile-4.svg",
         order: 4,
     },
@@ -754,5 +754,4 @@ export const marketingTiles = {
         image: "/marketing/Marketing_Tile-15.svg",
         order: 16,
     },
-
 };

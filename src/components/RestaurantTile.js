@@ -9,30 +9,34 @@ function RestaurantTile(props) {
         <Group
             x={props.offset.x + (x + 1) * props.unitSize}
             y={props.offset.y + (y + 1) * props.unitSize}
-            rotation={props.rotate * 90}
         >
-            <Rect
-                fill="#FFF5E0"
-                stroke="#1A1311"
-                strokeWidth={1}
-                width={2 * props.unitSize}
-                height={2 * props.unitSize}
-                x={-props.unitSize}
-                y={-props.unitSize}
-            />
-            <URLImage
-                src={`/restaurant-${props.player}.svg`}
-                width={2 * props.unitSize}
-                height={2 * props.unitSize}
-            />
-            <Line
-                stroke="#1A1311"
-                strokeWidth={1}
-                points={[
-                    3 - props.unitSize, -props.unitSize / 2,
-                    3 - props.unitSize , 3 - props.unitSize,
-                    -props.unitSize / 2, 3 - props.unitSize]}
-            />
+            <Group
+                rotation={props.rotate * 90}
+            >
+                <Rect
+                    fill="#FFF5E0"
+                    stroke="#1A1311"
+                    strokeWidth={1}
+                    width={2 * props.unitSize}
+                    height={2 * props.unitSize}
+                    x={-props.unitSize}
+                    y={-props.unitSize}
+                />
+                <URLImage
+                    src={`/restaurant-${props.player}.svg`}
+                    width={2 * props.unitSize}
+                    height={2 * props.unitSize}
+                />
+                <Line
+                    stroke="#1A1311"
+                    strokeWidth={2}
+                    points={[
+                        6 - props.unitSize, -props.unitSize / 2,
+                        6 - props.unitSize , 6 - props.unitSize,
+                        -props.unitSize / 2, 6 - props.unitSize
+                    ]}
+                />
+            </Group>
             {props.isEditing ?
                 <Group
                     x={-props.unitSize / 2}
@@ -86,7 +90,7 @@ RestaurantTile.propTypes = {
 
 RestaurantTile.defaultProps = {
     rotate: 0,
-    isEditing: true, // FIXME:
+    isEditing: true,
 };
 
 export default RestaurantTile;

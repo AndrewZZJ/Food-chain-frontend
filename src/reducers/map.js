@@ -168,6 +168,7 @@ const initialState = {
             order: 1,
             position: [1, 0],
             direction: 2,
+            restaurant: 1,
         },
         Mk07: {
             type: "mailbox",
@@ -176,6 +177,7 @@ const initialState = {
             order: 7,
             position: [4, 0],
             direction: 1,
+            restaurant: 2,
         },
         Mk14: {
             type: "billboard",
@@ -184,6 +186,7 @@ const initialState = {
             order: 14,
             position: [9, 0],
             direction: 2,
+            restaurant: 1,
         },
         Mk11: {
             type: "billboard",
@@ -192,6 +195,7 @@ const initialState = {
             order: 11,
             position: [10, 9],
             direction: 2,
+            restaurant: 3,
         },
         Mk13: {
             type: "billboard",
@@ -200,6 +204,34 @@ const initialState = {
             order: 13,
             position: [12, 1],
             direction: 2,
+            restaurant: 2,
+        },
+        Mk06: {
+            type: "airplane",
+            size: [5, 2],
+            image: "/marketing/Marketing_Tile-16.svg",
+            order: 6,
+            position: [0, -2],
+            direction: 0,
+            restaurant: 1,
+        },
+        Mk04: {
+            type: "airplane",
+            size: [2, 1],
+            image: "/marketing/Marketing_Tile-4.svg",
+            order: 4,
+            position: [9, -2],
+            direction: 1,
+            restaurant: 1,
+        },
+        Mk05: {
+            type: "airplane",
+            size: [3, 2],
+            image: "/marketing/Marketing_Tile-5.svg",
+            order: 5,
+            position: [15, 3],
+            direction: 3,
+            restaurant: 1,
         },
     }
 };

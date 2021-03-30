@@ -11,10 +11,13 @@ import House from "./House";
 import Garden from "./Garden";
 import MarketingTile from "./MarketingTile";
 import RestaurantTile from "./RestaurantTile";
+import MarketingPopop from "./MarketingPopup";
 
 function GameMap(props){
     const colRef = useRef(null);
     const [size, setSize] = useState({width: 0, height:0});
+    const [advertisement, setAdvertise] = useState(null);
+
     useEffect(() => {
         function onResize(){
             setSize({
@@ -162,8 +165,15 @@ function GameMap(props){
                             marketing={marketing}
                             unitSize={props.sizeInfo.tileSize / 5}
                             offset={props.sizeInfo.offset}
+                            setAdvertise={setAdvertise}
                         />
                     ))}
+                    {(advertisement !== null) ?
+                        <MarketingPopop
+                            message={advertisement}
+                            unitSize={props.sizeInfo.tileSize / 5}
+                        /> : null
+                    }
                 </Layer>
             </Stage>
         </Col>
