@@ -1,0 +1,63 @@
+#game-stat{
+    flex-grow: 0;
+    padding: 0.02vh 0;
+    border-right: 1px solid #1a1311;
+}
+
+#game-phase{
+    width: 20vw;
+    height: 8.33vh;
+    margin: 0;
+    padding: 0;
+    margin-right: 5px;
+    background-image: url("/Flag.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#game-phase .turn-back{
+    width: 8.33vh;
+    height: 8.33vh;
+    margin: 5px;
+    font-size: 3em;
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px 0px #777777;
+    text-indent: 7px;
+    font-weight: normal;
+}
+
+#game-phase .turn-phase{
+    font-size: 1.5em;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -7px;
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+#game-reserve{
+    width: 20vw;
+    height: 8.33vh;
+    margin: 0;
+    font-weight: normal;
+    display: flex;
+}
+
+#game-reserve img{
+    margin-left: 10%;
+}
+
+#reserve-value{
+    color: #CB2E25;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    font-size: 2.5em;
+}

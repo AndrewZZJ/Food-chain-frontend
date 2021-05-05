@@ -2,6 +2,9 @@ const initialState = {
     players: {},
     spectaculars: [],
     isPlaying: false,
+    turn: 0,
+    phase: "Setting up",
+    money: 200, 
 };
 
 export default (state = initialState, action) => {
